@@ -152,7 +152,8 @@ body {
         display: none;
     }
     @media (min-width: $breakpoint-tablet) {
-        display: initial;
+        display: inherit;
+        box-shadow: 0 3px 14px 0 rgba(20, 20, 21, 0.05) !important;
     }
     .add_menu_box {
         display: flex;
@@ -400,4 +401,50 @@ body {
         position: absolute;
         left: 10px;
     }
+}
+
+
+.add__custom__container {
+    max-width: 100%;
+    margin: auto;
+    @media (min-width:$breakpoint-tablet) {
+        max-width: 89%;
+    }
+
+    @media (min-width: $breakpoint-large-desktop) {
+        max-width: 67.5%;
+    }
+}
+
+.breadcrumb{
+    background: none !important;
+    padding-left: 0px !important;
+}
+
+.page_breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    li{
+        list-style: none;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        a{
+            color:$on-surface ;
+        }
+    }
+}
+
+
+.page__line{
+    height: 1px;
+  margin: 16px 0 0;
+  background: $secondary-variant;
 }

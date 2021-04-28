@@ -3,6 +3,9 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
+use App\Http\Controllers\Web\NewsController;
+use App\Http\Controllers\Web\UpcomingController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,8 @@ use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
 */
 Route::domain(config('localhost:8000'))->group(function () {
 	Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/news', [NewsController::class, 'index'])->name('news');
+    Route::get('/upcoming', [UpcomingController::class, 'index'])->name('upcoming');
 	Route::get('/app/login', [HomeController::class, 'index'])->name('app.login');
 	Route::get('/web/redirect', [HomeController::class, 'index'])->name('app.redirect');
     // Password Reset Routes...
@@ -28,4 +33,10 @@ Route::domain(config('localhost:8000'))->group(function () {
 
 	    return redirect('/');
 	})->middleware(['auth', 'signed'])->name('verification.verify');
+
+    //pages route
+
 });
+
+
+

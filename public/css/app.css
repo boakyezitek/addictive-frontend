@@ -287,6 +287,59 @@
 
 /*default version*/
 
+.news_content {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news_content .new__mask {
+  width: 170px;
+  height: 235px;
+  margin: 0 0 4px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07) !important;
+}
+
+.news_content .new__mask img {
+  max-width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.news_content .active__name {
+  color: #898394;
+  display: inline-block;
+}
+
+.news_content .active__list {
+  color: #f66757;
+}
+
+.news_content .book__button {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-top: 18px;
+}
+
+.news_content .book__button .tint {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: solid 1px #e2e0e6;
+}
+
+/*default version*/
+
 * {
   padding: 0;
   font-weight: 300;
@@ -466,7 +519,8 @@ body {
 
 @media (min-width: 768px) {
   .add_navbar {
-    display: initial;
+    display: inherit;
+    box-shadow: 0 3px 14px 0 rgba(20, 20, 21, 0.05) !important;
   }
 }
 
@@ -733,6 +787,56 @@ body {
 .mobile-search-box .mobile-ic-search {
   position: absolute;
   left: 10px;
+}
+
+.add__custom__container {
+  max-width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .add__custom__container {
+    max-width: 89%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .add__custom__container {
+    max-width: 67.5%;
+  }
+}
+
+.breadcrumb {
+  background: none !important;
+  padding-left: 0px !important;
+}
+
+.page_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.page_breadcrumb li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.page_breadcrumb li a {
+  color: #898394;
+}
+
+.page__line {
+  height: 1px;
+  margin: 16px 0 0;
+  background: #e2e0e6;
 }
 
 form.hive-form .preview {
