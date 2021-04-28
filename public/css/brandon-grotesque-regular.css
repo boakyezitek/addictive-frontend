@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Brandon Grotesque Regular';
+    font-style: italic;
+    font-weight: 390;
+    src: local('Brandon Grotesque Regular'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-regular-italic-58a8a456c4724.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Thin';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Brandon Grotesque Thin'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-thin-italic-58a8a3a8861fe.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Light';
+    font-style: normal;
+    font-weight: 330;
+    src: local('Brandon Grotesque Light'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-light-58a8a4b38001d.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Light';
+    font-style: italic;
+    font-weight: 330;
+    src: local('Brandon Grotesque Light'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-light-italic-58a8a4ccb88be.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Medium';
+    font-style: italic;
+    font-weight: 420;
+    src: local('Brandon Grotesque Medium'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-medium-italic-58a8a3c40866a.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Bold';
+    font-style: italic;
+    font-weight: 450;
+    src: local('Brandon Grotesque Bold'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-bold-italic-58a8a48221563.woff') format('woff');
+}
+@font-face {
+    font-family: 'Brandon Grotesque Black';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Brandon Grotesque Black'), url('https://fonts.cdnfonts.com/s/14480/brandon-grotesque-black-58a8a3e824392.woff') format('woff');
+}
+
+

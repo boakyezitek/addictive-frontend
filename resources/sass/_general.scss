@@ -1,0 +1,26 @@
+form.hive-form{
+	.preview{
+		max-width: 300px;
+		border: 1px dashed #c9c9c9;
+		margin-top: 10px;
+	}
+	video{
+		margin-top: 10px;	
+	}
+	textarea{
+		min-height: 160px;
+	}
+}
+#import-form{
+	margin-left: 10px;
+}
+
+.navbar-laravel {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}

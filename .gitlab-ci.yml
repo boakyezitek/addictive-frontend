@@ -1,0 +1,24 @@
+deploy_dev:
+  stage: deploy
+  image: $CI_REGISTRY/appsolute-internal/container-registry/deployer-php:latest
+  script:
+    - install -m 600 /dev/null ~/.ssh/id_rsa && (echo $SSH_PRIVATE_KEY_DEV | base64 -d) > ~/.ssh/id_rsa
+    - dep deploy develop
+  environment:
+    name: development
+    url: https://addictives.appsolute.dev
+  only:
+    - develop
+
+
+deploy_preprod:
+  stage: deploy
+  image: $CI_REGISTRY/appsolute-internal/container-registry/deployer-php:latest
+  script:
+    - install -m 600 /dev/null ~/.ssh/id_rsa && (echo $SSH_PRIVATE_KEY_STAGING | base64 -d) > ~/.ssh/id_rsa
+    - dep deploy staging 
+  environment:
+    name: staging
+    url: https://addictives-preprod.apps-dev.io
+  only:
+    - staging
