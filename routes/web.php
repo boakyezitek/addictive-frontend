@@ -5,8 +5,8 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
 use App\Http\Controllers\Web\NewsController;
 use App\Http\Controllers\Web\UpcomingController;
-use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Web\WriteFormController;
+use App\Http\Controllers\Web\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::domain(config('localhost:8000'))->group(function () {
 	Route::get('/', [HomeController::class, 'index'])->name('home');
-    Route::get('/news', [NewsController::class, 'index'])->name('news');
+	Route::get('/news', [NewsController::class, 'index'])->name('news');
     Route::get('/upcoming', [UpcomingController::class, 'index'])->name('upcoming');
+    Route::get('/write_form', [WriteFormController::class, 'index'])->name('writeform');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 	Route::get('/app/login', [HomeController::class, 'index'])->name('app.login');
 	Route::get('/web/redirect', [HomeController::class, 'index'])->name('app.redirect');
     // Password Reset Routes...
@@ -33,10 +35,4 @@ Route::domain(config('localhost:8000'))->group(function () {
 
 	    return redirect('/');
 	})->middleware(['auth', 'signed'])->name('verification.verify');
-
-    //pages route
-
 });
-
-
-

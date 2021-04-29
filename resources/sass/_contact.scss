@@ -1,0 +1,104 @@
+.add__contact__section{
+    margin: 1.5em 0;
+    .contact-wrapper{
+        @media(max-width:$breakpoint-mobile){
+            width:90%;
+        }
+        @media(max-width:$breakpoint-tablet){
+            width:80%;
+        }
+        width:53%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        margin-left:auto;
+        margin-right:auto;
+        gap:1.5em;
+
+        p.contact__title{
+            margin:1.5em 0  0;
+            height: 54px;
+            font-family: BrandonGrotesque;
+            font-size: 38px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $primary;
+        }
+        p.contact__subtitle{
+            font-family: BrandonGrotesque;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $on-background;
+        }
+        .contact__form{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            flex-direction: column;
+            gap:1.5em;
+            .first__wrapper{
+                display: flex;
+                flex-wrap:wrap;
+                flex-direction: row;
+                justify-content: space-between;
+                @media(max-width:$breakpoint-mobile){
+                    flex-direction: column;
+                    gap: 1.5em;
+                }
+                input{
+                    @media(max-width:$breakpoint-mobile){
+                        width: 100%;
+                    }
+                    height:48px;
+                    width: 45%;
+                    border-radius: 8px;
+                    background-color:$secondary;
+                    border: none;
+                    outline: none;
+                    padding-left:10px;
+                    opacity: 0.1;
+                }
+            }
+            .second__wrapper{
+                .message{
+                    padding-left:10px;
+                    padding-top:10px;
+                    height: 174px;
+                    width: 100%;
+                    border-radius: 8px;
+                    background-color:$secondary;
+                    opacity: 0.1;
+                }
+            }
+            .submit_btn{
+                width: 171px;
+                @media(max-width:$breakpoint-mobile){
+                    width: 100%;
+                }
+                height: 50px;
+                align-self: flex-end;
+                border-radius: 8px;
+                background-color: $primary;
+                color:$surface;
+                font-family: BrandonGrotesque;
+                font-size: 18px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import "_variables";
+
+.write__form__container{
+    padding:30px 0;
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-wrap: wrap;
+    .write__form__sidebar{
+        width: 30%;
+        .sidebar__content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap:1.5em;
+            .sidebar_area{
+                display: flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                align-items: baseline;
+                .sidebar__number{
+                    width: 34px;
+                    height: 32px;
+                    margin: 0 20px 0 0;
+                    padding: 4px 14px 5px;
+                    // opacity: 0.1;
+                    border-radius: 20px;
+                    background-color:#898394;
+                    // color:$on-surface;
+                }
+                .sidebar__number .active{
+                    background-color: $background-pink;
+                }
+                .sidebar__label .active{
+                    background-color: $background-pink;
+                }
+                .sidebar__label{
+                    font-family: BrandonGrotesque;
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+            }
+        }
+      
+    }
+    .write__form__content{
+        .right__main__content{
+            display: flex;
+            flex-wrap:wrap;
+            flex-direction: column;
+            justify-content:space-between;
+            gap:1.5em;
+            .right__main__content__title{
+                p{
+
+                    font-family: BrandonGrotesque;
+                    font-size: 38px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                }
+            }
+            .right__main__content__context{
+                .context{
+                     width: 672px !important;
+                }
+            }
+            .right__main__content__btn{
+                width: 214px;
+                height: 48px;
+                border-radius: 8px;
+                text-align: center;
+                background-color: $_primary;
+                display: flex;
+                align-self: flex-end;
+                justify-content: center;
+                margin-right: 50px;
+                p{
+                    font-family: BrandonGrotesque;
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 48px;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color:$surface;
+                }
+  
+            }
+        }
+    }
+}
+

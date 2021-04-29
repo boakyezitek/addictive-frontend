@@ -285,8 +285,6 @@
   opacity: 0.75;
 }
 
-/*default version*/
-
 .news_content {
   display: flex;
   gap: 2em;
@@ -338,11 +336,8 @@
   border: solid 1px #e2e0e6;
 }
 
-/*default version*/
-
 * {
   padding: 0;
-  font-weight: 300;
 }
 
 body {
@@ -555,7 +550,7 @@ body {
 }
 
 .add_navbar .add_menu_box .add_main_menu ul li a {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
@@ -580,7 +575,12 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #f66757;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Brandon Grotesque";
+}
+
+.add_navbar .add_menu_box .add_outline_btn .writeform__btn {
+  color: #f66757 !important;
+  text-decoration: none !important;
 }
 
 .add_navbar .add_menu_box .add_social {
@@ -728,6 +728,671 @@ body {
   margin-top: -5px;
 }
 
+.add__content__section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.add__content__section .add__content__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-left: 8px;
+}
+
+@media (min-width: 768px) {
+  .add__content__section .add__content__box {
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: none;
+  }
+}
+
+.add__content__section .add__content__box a {
+  text-decoration: none;
+}
+
+.add__content__section .add__content__box a img {
+  border-radius: 6.7px;
+}
+
+@media (min-width: 320px) {
+  .add__content__section .add__content__box a img {
+    width: 137px;
+    height: 216px;
+  }
+}
+
+@media (min-width: 360px) {
+  .add__content__section .add__content__box a img {
+    width: 155px;
+    height: 226px;
+  }
+}
+
+@media (min-width: 375px) {
+  .add__content__section .add__content__box a img {
+    width: 162px;
+    height: 226px;
+  }
+}
+
+@media (min-width: 411px) {
+  .add__content__section .add__content__box a img {
+    width: 180px;
+    height: 266px;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__content__section .add__content__box a img {
+    width: 270px;
+    height: 373px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 8px;
+    transition: 0.5s ease-out;
+  }
+}
+
+.add__content__section .add__content__box a img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  transition: 0.5s ease-in;
+}
+
+.add__page__btn,
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+  height: 48px;
+  padding-left: 26px;
+  padding-right: 26px;
+  background-color: #f66757;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 48px;
+  cursor: pointer;
+  font-family: "Brandon Grotesque";
+}
+
+@media (min-width: 320px) {
+  .add__page__btn,
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__page__btn,
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: none;
+  }
+}
+
+.add__custom__container {
+  max-width: 100%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .add__custom__container {
+    max-width: 89%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .add__custom__container {
+    max-width: 62.5%;
+  }
+}
+
+.add__page__title,
+.all__instagram__section .all__ig__box h4 {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+@media (min-width: 320px) {
+  .add__page__title,
+  .all__instagram__section .all__ig__box h4 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__page__title,
+  .all__instagram__section .all__ig__box h4 {
+    font-size: 38px;
+  }
+}
+
+.heading__with__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.heading__with__button .small {
+  height: 33px;
+  line-height: 33px;
+  border-radius: 20px;
+  display: block;
+  margin-top: -10px;
+}
+
+@media (min-width: 768px) {
+  .heading__with__button .small {
+    display: none;
+  }
+}
+
+.add__banner__box {
+  text-align: center;
+}
+
+.add__banner__box .add__banner__box {
+  background-color: #a9304e;
+  border-radius: 8px;
+}
+
+@media (min-width: 320px) {
+  .add__banner__box .add__banner__box .mobile {
+    display: block;
+  }
+
+  .add__banner__box .add__banner__box .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__banner__box .add__banner__box .mobile {
+    display: none;
+  }
+
+  .add__banner__box .add__banner__box .desktop {
+    display: block;
+  }
+}
+
+.add__newsletter__section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add__newsletter__section .add__newsletter__box {
+  display: flex;
+  justify-content: center;
+  background-color: #f66757;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box {
+  text-align: center;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .imgnewsletter_web {
+  width: 100% !important;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box h3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box span {
+  font-size: 18px;
+  font-weight: lighter;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Brandon Grotesque";
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 16px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+  background-color: rgba(255, 255, 255, 0.138);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+    width: 330px;
+    height: 50px;
+  }
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input {
+  flex: 1;
+  border: none !important;
+  display: inline-block;
+  color: #fff;
+  background: none;
+  font-family: "Brandon Grotesque";
+  height: 48px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::placeholder {
+  color: #ffffff;
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box .arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box .arrow {
+    display: none;
+  }
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+  background-color: #ffffff;
+  color: #f66757;
+  font-family: "Brandon Grotesque";
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: block;
+  }
+}
+
+.add__newsletter__section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.add__newsletter__section .add__newsletter__box {
+  display: flex;
+  justify-content: center;
+  background-color: #f66757;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box {
+  text-align: center;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .imgnewsletter_web {
+  width: 100% !important;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box h3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box span {
+  font-size: 18px;
+  font-weight: lighter;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Brandon Grotesque";
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 16px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+  background-color: rgba(255, 255, 255, 0.138);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box {
+    width: 330px;
+    height: 50px;
+  }
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input {
+  flex: 1;
+  border: none !important;
+  display: inline-block;
+  color: #fff;
+  background: none;
+  font-family: "Brandon Grotesque";
+  height: 48px;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box input::placeholder {
+  color: #ffffff;
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box .arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__newsletter__input__box .arrow {
+    display: none;
+  }
+}
+
+.add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+  background-color: #ffffff;
+  color: #f66757;
+  font-family: "Brandon Grotesque";
+}
+
+@media (min-width: 320px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
+    display: block;
+  }
+}
+
+.all__instagram__section {
+  background-color: #f3f3f3;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.all__instagram__section .all__ig__box {
+  text-align: center;
+}
+
+.all__instagram__section .all__ig__box h4 {
+  font-family: "Brandon Grotesque Medium", sans-serif;
+}
+
+.all__instagram__section .all__ig__box .add__instagram__item {
+  display: flex;
+  gap: 0.8em;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+@media (min-width: 768px) {
+  .all__instagram__section .all__ig__box .add__instagram__item {
+    justify-content: space-between;
+  }
+}
+
+.all__instagram__section .all__ig__box .add__instagram__item a img {
+  transition: 0.5s ease-out;
+}
+
+@media (min-width: 320px) {
+  .all__instagram__section .all__ig__box .add__instagram__item a img {
+    width: 90px;
+    height: 90px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (min-width: 768px) {
+  .all__instagram__section .all__ig__box .add__instagram__item a img {
+    width: 170px;
+    height: 170px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+.all__instagram__section .all__ig__box .add__instagram__item a img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  transition: 0.5s ease-in;
+}
+
+.add__footer {
+  height: auto;
+  background-color: #f66757;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.add__footer .footer__container {
+  text-align: center;
+}
+
+.add__footer .footer__container .add__footer__link__box {
+  max-width: 560px;
+  color: #ffffff;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.add__footer .footer__container .add__footer__link__box a {
+  font-family: "Brandon Grotesque";
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.add__copyright__footer {
+  min-height: 56px;
+  background-color: #fa8072;
+}
+
+@media (min-width: 320px) {
+  .add__copyright__footer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__copyright__footer {
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
+
+.add__copyright__footer .last_footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  flex-wrap: wrap;
+}
+
+.add__copyright__footer .last_footer__container span {
+  font-family: "Brandon Grotesque";
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+@media (min-width: 320px) {
+  .add__copyright__footer .last_footer__container span .copy_sub_text {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .add__copyright__footer .last_footer__container span .copy_sub_text {
+    display: initial;
+  }
+}
+
+.add__copyright__footer .last_footer__container .add__footer__social__icon {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.breadcrumb {
+  background: none !important;
+  padding-left: 0px !important;
+}
+
+.page_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.page_breadcrumb li {
+  list-style: none;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.page_breadcrumb li a {
+  color: #898394;
+}
+
+.page__line {
+  height: 1px;
+  margin: 16px 0 0;
+  background: #e2e0e6;
+}
+
 /* @mobile styles*/
 
 .mobile-nav {
@@ -789,38 +1454,136 @@ body {
   left: 10px;
 }
 
-.add__custom__container {
-  max-width: 100%;
-  margin: auto;
-}
-
-@media (min-width: 768px) {
-  .add__custom__container {
-    max-width: 89%;
-  }
-}
-
-@media (min-width: 1920px) {
-  .add__custom__container {
-    max-width: 67.5%;
-  }
-}
-
-.breadcrumb {
-  background: none !important;
-  padding-left: 0px !important;
-}
-
-.page_breadcrumb {
+.mobile__menu__box {
   display: flex;
-  align-items: center;
-  gap: 0.3em;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 10px;
+  background: #f66757;
 }
 
-.page_breadcrumb li {
-  list-style: none;
+.mobile__menu__box .mobile__navbar__menu {
+  padding: 0 16px;
+}
+
+.mobile__menu__box .mobile__navbar__menu li {
+  list-style-type: none;
+}
+
+.mobile__menu__box .mobile__navbar__menu li a {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 48px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.mobile__menu__box .mobile__navbar__menu li.active {
+  background-color: #ffe6e3;
+  border-radius: 8px;
+}
+
+.mobile__menu__box .mobile__navbar__menu li.active a {
+  color: #f66757;
+}
+
+.mobile__menu__box .add_outline_btn {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 154px;
+  height: 48px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 48px;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.mobile__menu__box .contact_address {
+  color: #ffffff;
+  align-items: center;
+  height: 48px;
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 48px;
+  letter-spacing: normal;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mobile__menu__box .img_area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.write__form__container {
+  padding: 30px 0;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.write__form__container .write__form__sidebar {
+  width: 30%;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content .sidebar_area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__number {
+  width: 34px;
+  height: 32px;
+  margin: 0 20px 0 0;
+  padding: 4px 14px 5px;
+  border-radius: 20px;
+  background-color: #898394;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__number .active {
+  background-color: #ffe6e3;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__label .active {
+  background-color: #ffe6e3;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__label {
+  font-family: BrandonGrotesque;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -829,14 +1592,175 @@ body {
   letter-spacing: normal;
 }
 
-.page_breadcrumb li a {
-  color: #898394;
+.write__form__container .write__form__content .right__main__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
 }
 
-.page__line {
-  height: 1px;
-  margin: 16px 0 0;
-  background: #e2e0e6;
+.write__form__container .write__form__content .right__main__content .right__main__content__title p {
+  font-family: BrandonGrotesque;
+  font-size: 38px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.write__form__container .write__form__content .right__main__content .right__main__content__context .context {
+  width: 672px !important;
+}
+
+.write__form__container .write__form__content .right__main__content .right__main__content__btn {
+  width: 214px;
+  height: 48px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #f66757;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.write__form__container .write__form__content .right__main__content .right__main__content__btn p {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 48px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.add__contact__section {
+  margin: 1.5em 0;
+}
+
+.add__contact__section .contact-wrapper {
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1.5em;
+}
+
+@media (max-width: 411px) {
+  .add__contact__section .contact-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .add__contact__section .contact-wrapper {
+    width: 80%;
+  }
+}
+
+.add__contact__section .contact-wrapper p.contact__title {
+  margin: 1.5em 0 0;
+  height: 54px;
+  font-family: BrandonGrotesque;
+  font-size: 38px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #f66757;
+}
+
+.add__contact__section .contact-wrapper p.contact__subtitle {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.add__contact__section .contact-wrapper .contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.add__contact__section .contact-wrapper .contact__form .first__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 411px) {
+  .add__contact__section .contact-wrapper .contact__form .first__wrapper {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+
+.add__contact__section .contact-wrapper .contact__form .first__wrapper input {
+  height: 48px;
+  width: 45%;
+  border-radius: 8px;
+  background-color: #898394;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  opacity: 0.1;
+}
+
+@media (max-width: 411px) {
+  .add__contact__section .contact-wrapper .contact__form .first__wrapper input {
+    width: 100%;
+  }
+}
+
+.add__contact__section .contact-wrapper .contact__form .second__wrapper .message {
+  padding-left: 10px;
+  padding-top: 10px;
+  height: 174px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #898394;
+  opacity: 0.1;
+}
+
+.add__contact__section .contact-wrapper .contact__form .submit_btn {
+  width: 171px;
+  height: 50px;
+  align-self: flex-end;
+  border-radius: 8px;
+  background-color: #f66757;
+  color: #ffffff;
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 411px) {
+  .add__contact__section .contact-wrapper .contact__form .submit_btn {
+    width: 100%;
+  }
 }
 
 form.hive-form .preview {

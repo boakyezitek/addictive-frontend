@@ -14,8 +14,9 @@
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/brandon-grotesque-regular.css') }}" rel="stylesheet" />
@@ -30,10 +31,13 @@
     <main>
         @yield('content')
     </main>
+    @include('layouts.footer')
+    @include('layouts.sub_footer')
      <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> 
     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
+    <script src="{{ asset('js/mobilescript.js') }}" defer></script>
 </body>
 
 </html>
