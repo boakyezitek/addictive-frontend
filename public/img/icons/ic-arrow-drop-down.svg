@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <filter id="70pnejpola">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.078431 0 0 0 0 0.078431 0 0 0 0 0.082353 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g filter="url(#70pnejpola)" transform="translate(-460 -203) translate(135 130) translate(240) translate(0 72)">
+                        <g>
+                            <path fill="#000" fill-rule="nonzero" d="M7 10L12 15 17 10z" transform="translate(85 1)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

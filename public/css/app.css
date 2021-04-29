@@ -1773,7 +1773,7 @@ body {
 }
 
 .row__box .col-md-2 {
-  max-width: 210px;
+  max-width: 230px;
 }
 
 .row__box .catalog__search__input {
@@ -1781,6 +1781,21 @@ body {
   height: 48px;
   display: flex;
   gap: 1em;
+  border-radius: 8px;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 20px;
+}
+
+.row__box .catalog__search__input input {
+  flex: 1;
+  background: none;
+  height: auto;
+  border: none;
+}
+
+.row__box .catalog__search__input input:focus {
+  outline: none;
 }
 
 .page__outline__input {
@@ -1790,6 +1805,143 @@ body {
   border-radius: 8px;
   border: solid 1px #141415;
   text-align: center;
+}
+
+.c__title {
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.tag__box {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.tag__box .tag__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.tag__box .tag__list .tag__main__box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  min-width: 91px;
+  height: 32px;
+  border-radius: 18px;
+  border: 1px solid #e2e0e6;
+  cursor: pointer;
+}
+
+.tag__box .tag__list .tag__main__box div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0.5em;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.tag__box .tag__list .tag__main__box div span {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.styled-checkbox + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #e2e0e6;
+  border-radius: 5px;
+}
+
+.styled-checkbox:hover + label:before {
+  background: #f66757;
+}
+
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.styled-checkbox:checked + label:before {
+  background: #f66757;
+}
+
+.styled-checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+
+.styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+
+.styled-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.unstyled li {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dropdown__box .menu {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+}
+
+.dropdown__box .menu .active {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
 }
 
 form.hive-form .preview {
