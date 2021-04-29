@@ -1,0 +1,27 @@
+@import "_variables";
+
+.row__box{
+    display: flex;
+    gap: 2.2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .col-md-2{
+        max-width: 210px;
+    }
+    .catalog__search__input{
+        background: #f3f3f4;
+        height: 48px;
+        display: flex;
+        gap:1em;
+    }
+
+}
+.page__outline__input{
+    min-width: 210px;
+  height: 48px;
+  padding: 11px 21.3px 11px 22px;
+  border-radius: 8px;
+  border: solid 1px $on-background;
+  text-align: center;
+}
