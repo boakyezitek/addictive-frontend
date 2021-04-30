@@ -1,0 +1,251 @@
+@import "_variables";
+
+.book__details__main__box {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+
+    .book__details__container {
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+
+        .mask__box {
+            max-width: 370px;
+            img{
+                object-fit: fill;
+            }
+
+            .social__box{
+                display: flex;
+                justify-content:space-between;
+                gap: 1em;
+                align-items: center;
+                h5{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: 2.57px;
+                    color: $secondary;
+                }
+                .social__list{
+                    display: flex;
+                    gap: 1em;
+                    align-items: center;
+                    height: 100%;
+
+                    a{
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                            width: 29px;
+                            height: 29px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .details__content__box {
+            flex: 1;
+
+            .large__page__title{
+                font-family: $font-stack-bold;
+                font-size: 34px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: $on-background;
+
+            }
+
+            .book__info{
+                .main_text{
+                    display: block;
+                    margin-bottom: 10px;
+                     a{
+                         text-decoration: underline;
+                         color: $on-surface;
+                         font-weight: bold;
+                     }
+                    span{
+                        font-weight: bold;
+                        color: $on-surface;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+.small__heading{
+    font-family:$font-stack-bold;
+    font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $on-background;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: $primary;
+}
+
+.nav-pills .nav-link{
+    font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $on-background;
+  margin-right: 16px;
+  border-radius: 8px;
+  border: 1px solid $secondary-variant;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+
+.dropdown__button{
+    position: relative;
+    max-width: 385px;
+
+    .dropdown__menu{
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 12px 11px 16px;
+        height: 48px;
+        border: 1px solid $on-background;
+        cursor: pointer;
+    }
+
+    .dropdown__list{
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07);
+        width: 386px;
+       position:absolute;
+       top: 42px;
+       z-index: 999;
+       background: #fff;
+       border-radius: 8px;
+       border: solid 1px #f3f3f4;
+       padding: 10px;
+       display: none;
+       .menu__list{
+           a{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             text-decoration: none;
+            .icon__box{
+                display: flex;
+                align-items: center;
+                gap: 0.8em;
+
+                span{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: $on-background;
+                }
+            }
+
+           }
+        .dropdown__divider{
+            height: 1px;
+            margin-top: 11px;
+            background: #e2e0e6;
+            margin-bottom: 10px;
+        }
+       }
+    }
+}
+.btn__dropup{
+    display: none;
+}
+
+.hide__arrow{
+    display: none !important;
+}
+
+.show__arrow{
+    display: block !important;
+}
+
+
+.red__tag__box{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    .tags{
+        width: 81px;
+  height: 32px;
+  margin: 0 12px 0 0;
+  padding: 4px 12px 5px;
+  border-radius: 20px;
+  background-color: $background-pink;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color:$primary;
+    }
+}
+
+.info__box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    span{
+        color: $on-background;
+        font-weight: bold;
+    }
+    .active{
+        color: $on-surface;
+        font-weight: bold;
+    }
+
+
+}
+
+
+.other__books__box{
+   .other__books{
+       display: flex;
+       gap: 1em;
+       align-items: center;
+       flex-wrap: wrap;
+
+       .books {
+        width: 170px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img{
+           max-width: 100%;
+        }
+      }
+   }
+}

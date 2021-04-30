@@ -1539,6 +1539,12 @@ body {
   margin-top: 20px;
 }
 
+.page__line {
+  height: 1px;
+  margin: 32px 1px 32px 0;
+  background: #e2e0e6;
+}
+
 .write__form__container {
   padding: 30px 0;
   width: 1200px;
@@ -1942,6 +1948,252 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #141415;
+}
+
+.book__details__main__box {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.book__details__main__box .book__details__container {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.book__details__main__box .book__details__container .mask__box {
+  max-width: 370px;
+}
+
+.book__details__main__box .book__details__container .mask__box img {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.book__details__main__box .book__details__container .mask__box .social__box {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+}
+
+.book__details__main__box .book__details__container .mask__box .social__box h5 {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.57px;
+  color: #898394;
+}
+
+.book__details__main__box .book__details__container .mask__box .social__box .social__list {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  height: 100%;
+}
+
+.book__details__main__box .book__details__container .mask__box .social__box .social__list a {
+  display: flex;
+  align-items: center;
+}
+
+.book__details__main__box .book__details__container .mask__box .social__box .social__list a img {
+  width: 29px;
+  height: 29px;
+}
+
+.book__details__main__box .book__details__container .details__content__box {
+  flex: 1;
+}
+
+.book__details__main__box .book__details__container .details__content__box .large__page__title {
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.book__details__main__box .book__details__container .details__content__box .book__info .main_text {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.book__details__main__box .book__details__container .details__content__box .book__info .main_text a {
+  text-decoration: underline;
+  color: #898394;
+  font-weight: bold;
+}
+
+.book__details__main__box .book__details__container .details__content__box .book__info .main_text span {
+  font-weight: bold;
+  color: #898394;
+}
+
+.small__heading {
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #f66757;
+}
+
+.nav-pills .nav-link {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #141415;
+  margin-right: 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e0e6;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.dropdown__button {
+  position: relative;
+  max-width: 385px;
+}
+
+.dropdown__button .dropdown__menu {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 12px 11px 16px;
+  height: 48px;
+  border: 1px solid #141415;
+  cursor: pointer;
+}
+
+.dropdown__button .dropdown__list {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07);
+  width: 386px;
+  position: absolute;
+  top: 42px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 8px;
+  border: solid 1px #f3f3f4;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown__button .dropdown__list .menu__list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.dropdown__button .dropdown__list .menu__list a .icon__box {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.dropdown__button .dropdown__list .menu__list a .icon__box span {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.dropdown__button .dropdown__list .menu__list .dropdown__divider {
+  height: 1px;
+  margin-top: 11px;
+  background: #e2e0e6;
+  margin-bottom: 10px;
+}
+
+.btn__dropup {
+  display: none;
+}
+
+.hide__arrow {
+  display: none !important;
+}
+
+.show__arrow {
+  display: block !important;
+}
+
+.red__tag__box {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.red__tag__box .tags {
+  width: 81px;
+  height: 32px;
+  margin: 0 12px 0 0;
+  padding: 4px 12px 5px;
+  border-radius: 20px;
+  background-color: #ffe6e3;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f66757;
+}
+
+.info__box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.info__box span {
+  color: #141415;
+  font-weight: bold;
+}
+
+.info__box .active {
+  color: #898394;
+  font-weight: bold;
+}
+
+.other__books__box .other__books {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.other__books__box .other__books .books {
+  width: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.other__books__box .other__books .books img {
+  max-width: 100%;
 }
 
 form.hive-form .preview {

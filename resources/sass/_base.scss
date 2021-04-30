@@ -1066,3 +1066,10 @@ body{
         margin-top: 20px;
     }
 }
+
+
+.page__line{
+    height: 1px;
+  margin: 32px 1px 32px 0;
+  background: $secondary-variant;
+}

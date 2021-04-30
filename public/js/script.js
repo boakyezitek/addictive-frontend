@@ -68,3 +68,13 @@ $("#searchBar").on('focus', function(){
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
 });
+
+$(".dropdown__menu").on('click', function(){
+    $(".btn__dropup").toggleClass("show__arrow");
+    $('.btn__dropdown').toggleClass("hide__arrow");
+    const element = document.querySelector(".dropdown__list");
+    element.classList.add("animate__animated", "animate__slideInLeft");
+    element.style.setProperty('--animate-duration', '1s');
+    $('.dropdown__list').toggle();
+
+})
