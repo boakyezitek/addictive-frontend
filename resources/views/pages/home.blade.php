@@ -11,4 +11,6 @@
 @endif
 @include('partial.newsletter')
 @include('partial.instagram')
+@include('layouts.footer')
+@include('layouts.sub_footer')
 @endsection

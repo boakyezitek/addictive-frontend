@@ -1,12 +1,12 @@
 <div class="add_navbar">
     <div class="add_menu_box">
-        <div><img src="img/logo/logo.svg" /></div>
+        <div><img src="img/logo/logo.svg" class="logo" /></div>
         <div class="add_main_menu">
             <ul>
-                <li><a href="/">Nos livres</a></li>
+                <li><a href="/catalog">Nos livres</a></li>
                 <li><a href="/news">Nouveautés</a> </li>
                 <li> <a href="/upcoming">À paraître</a></li>
-                <li> <a href="#">Nos auteures</a> </li>
+                <li> <a href="/writers">Nos auteures</a> </li>
             </ul>
         </div>
         <div class="add_outline_btn">

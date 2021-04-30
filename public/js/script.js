@@ -62,9 +62,19 @@ $("#hide-search").on("click", function() {
 
 $("#searchBar").on('focus', function(){
   $(".search__drop__down__box").css("display", "inline").fadeIn(2000);
+
 });
 
 
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
+});
+$("#myButton").on('click',  function () {
+  location.href = "/manuscript";
+});
+$(".right__main__content__btn").on('click',  function () {
+  location.href = "/condition";
+});
+$(".logo").on('click',  function () {
+  location.href = "/";
 });

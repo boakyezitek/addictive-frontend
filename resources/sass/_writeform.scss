@@ -2,48 +2,48 @@
 
 .write__form__container{
     padding:30px 0;
-    width:1200px;
+    width:80%;;
     margin-left:auto;
     margin-right:auto;
     display:flex;
     flex-wrap: wrap;
     .write__form__sidebar{
-        width: 30%;
+        width: 27%;
         .sidebar__content{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap:1.5em;
-            .sidebar_area{
-                display: flex;
-                flex-direction: row;
-                flex-wrap:wrap;
-                justify-content: flex-start;
-                align-items: baseline;
-                .sidebar__number{
-                    width: 34px;
-                    height: 32px;
-                    margin: 0 20px 0 0;
-                    padding: 4px 14px 5px;
-                    // opacity: 0.1;
-                    border-radius: 20px;
-                    background-color:#898394;
-                    // color:$on-surface;
-                }
-                .sidebar__number .active{
-                    background-color: $background-pink;
-                }
-                .sidebar__label .active{
-                    background-color: $background-pink;
-                }
-                .sidebar__label{
+            li{
+                list-style:none;
+                a{
                     font-family: BrandonGrotesque;
                     font-size: 18px;
                     font-weight: normal;
                     font-stretch: normal;
                     font-style: normal;
-                    line-height: normal;
+                    line-height: 34px;
                     letter-spacing: normal;
+                    color:#898394 ;
+                    text-decoration: none;
+                    p.icon{
+                        background-color: $background-pink ;
+                        color: $on-surface ;
+                        width: 34px ;
+                        border-radius: 20px;
+                        text-align: center;
+                        height: 34px;
+                        display:inline-block;
+                        margin-bottom: 2rem ;
+                    }
+                    span.list{
+                        height: 26px;
+                        margin: 3px 0 3px 20px;
+                        font-family: BrandonGrotesque;
+                        font-size: 18px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        display:inline-block;
+                    }
                 }
             }
         }
@@ -70,7 +70,7 @@
             }
             .right__main__content__context{
                 .context{
-                     width: 672px !important;
+                     width: 672px;
                 }
             }
             .right__main__content__btn{

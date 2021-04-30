@@ -31,8 +31,7 @@
     <main>
         @yield('content')
     </main>
-    @include('layouts.footer')
-    @include('layouts.sub_footer')
+ 
      <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> 
     <script src="{{ asset('js/slick.min.js') }}"></script>
