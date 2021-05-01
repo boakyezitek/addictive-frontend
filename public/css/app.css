@@ -1,4 +1,4 @@
-@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);/*!
+@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);/*!
  * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
@@ -1948,6 +1948,119 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #141415;
+}
+
+.letter__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.letter__box .letter {
+  margin-bottom: 20px;
+  width: 36px;
+  height: 32px;
+  border-radius: 20px;
+  border: solid 1px #e2e0e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter__box .letter:hover {
+  background: #f66757;
+  color: #fff;
+  cursor: pointer;
+}
+
+.letter__box .is_active {
+  background: #f66757;
+  color: #fff;
+}
+
+.user__box {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user__box .avatar__box {
+  width: 210px;
+  height: 150px;
+  padding: 16px;
+  border-radius: 8px;
+  border: solid 1px #e2e0e6;
+  text-align: center;
+  background: #ffffff;
+}
+
+.user__box .avatar__box .avatal {
+  width: 48px;
+  height: 48px;
+  margin: 0 65px 12px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courgette", cursive;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.user__box .avatar__box .red {
+  background-color: #f66757;
+  color: #fff;
+}
+
+.user__box .avatar__box .blue {
+  background-color: #75a8e8;
+  color: #fff;
+}
+
+.user__box .avatar__box .dark {
+  background-color: #e2e0e6;
+  color: #fff;
+}
+
+.user__box .avatar__box .pink {
+  background-color: #e293ca;
+  color: #fff;
+}
+
+.user__box .avatar__box .green {
+  background-color: #6dc4ad;
+  color: #fff;
+}
+
+.user__box .avatar__box h4 {
+  margin: 12px 0 4px;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #141415;
+}
+
+.user__box .avatar__box span {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f66757;
 }
 
 .book__details__main__box {

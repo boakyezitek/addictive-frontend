@@ -1,0 +1,112 @@
+@import "_variables";
+
+.letter__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .letter{
+        margin-bottom: 20px;
+        width: 36px;
+        height: 32px;
+        border-radius: 20px;
+        border: solid 1px $secondary-variant;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     &:hover{
+        background: $primary;
+        color: #fff;
+        cursor: pointer;
+     }
+    }
+
+    .is_active{
+        background: $primary;
+        color: #fff;
+    }
+}
+
+.user__box{
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    flex-wrap: wrap;
+    .avatar__box{
+        width: 210px;
+        height: 150px;
+        padding: 16px;
+        border-radius: 8px;
+        border: solid 1px $secondary-variant;
+        text-align: center;
+        background: $surface;
+        .avatal{
+            width: 48px;
+            height: 48px;
+            margin: 0 65px 12px;
+            line-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-courgette;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+
+            border-radius: 100%;
+          }
+
+          .red{
+            background-color: $primary;
+            color: #fff;
+          }
+
+          .blue{
+            background-color: $colors-blue;
+            color: #fff;
+          }
+
+          .dark{
+            background-color: $secondary-variant;
+            color: #fff;
+          }
+
+          .pink{
+            background-color: $colors-pink;
+            color: #fff;
+          }
+
+          .green{
+            background-color: $colors-green;
+            color: #fff;
+          }
+
+          h4{
+            margin: 12px 0 4px;
+            font-size: 22px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color:$on-background;
+          }
+
+          span{
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: $primary;
+          }
+
+    }
+}

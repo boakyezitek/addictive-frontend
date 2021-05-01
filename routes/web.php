@@ -9,6 +9,8 @@ use App\Http\Controllers\Web\NewsController;
 use App\Http\Controllers\Web\UpcomingController;
 use App\Http\Controllers\Web\WriteFormController;
 use App\Http\Controllers\Web\ContactController;
+use App\Http\Controllers\Web\WriterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +29,7 @@ Route::domain(config('localhost:8000'))->group(function () {
     Route::get('/contact', [ContactController::class, 'index'])->name('contact');
     Route::get('/catalogue', [CatalogueController::class, 'index'])->name('catalogue');
     Route::get('/book_details', [BookDetailController::class, 'index'])->name('books_details');
+    Route::get('/writers', [WriterController::class, 'index'])->name('writers');
     Route::get('/app/login', [HomeController::class, 'index'])->name('app.login');
 	Route::get('/web/redirect', [HomeController::class, 'index'])->name('app.redirect');
     // Password Reset Routes...
