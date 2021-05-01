@@ -2260,7 +2260,7 @@ body {
 }
 
 .red__tag__box .tags {
-  width: 81px;
+  min-width: 81px;
   height: 32px;
   margin: 0 12px 0 0;
   padding: 4px 12px 5px;
@@ -2307,6 +2307,40 @@ body {
 
 .other__books__box .other__books .books img {
   max-width: 100%;
+}
+
+.bio__details {
+  max-width: 50%;
+}
+
+.bio__details p {
+  text-align: justify;
+}
+
+.bio__user img {
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
+}
+
+.bio__user .main__heading {
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.bio__user span {
+  color: #f66757;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 form.hive-form .preview {

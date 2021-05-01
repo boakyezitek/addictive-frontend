@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
+use App\Http\Controllers\Web\BioController;
 use App\Http\Controllers\Web\BookDetailController;
 use App\Http\Controllers\Web\CatalogueController;
 use App\Http\Controllers\Web\NewsController;
@@ -30,6 +31,7 @@ Route::domain(config('localhost:8000'))->group(function () {
     Route::get('/catalogue', [CatalogueController::class, 'index'])->name('catalogue');
     Route::get('/book_details', [BookDetailController::class, 'index'])->name('books_details');
     Route::get('/writers', [WriterController::class, 'index'])->name('writers');
+    Route::get('/bio', [BioController::class, 'index'])->name('bio');
     Route::get('/app/login', [HomeController::class, 'index'])->name('app.login');
 	Route::get('/web/redirect', [HomeController::class, 'index'])->name('app.redirect');
     // Password Reset Routes...

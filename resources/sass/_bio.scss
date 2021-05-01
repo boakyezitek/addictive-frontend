@@ -1,0 +1,35 @@
+.bio__details{
+    max-width: 50%;
+    p{
+        text-align: justify;
+    }
+}
+
+
+.bio__user{
+    img{
+        width: 88px;
+        height: 88px;
+        border-radius: 100%;
+    }
+
+    .main__heading{
+        font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color:$on-background;
+    }
+
+    span{
+        color: $primary;
+        font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+    }
+}
