@@ -62,19 +62,36 @@ $("#hide-search").on("click", function() {
 
 $("#searchBar").on('focus', function(){
   $(".search__drop__down__box").css("display", "inline").fadeIn(2000);
+
 });
 
 
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
 });
+$("#myButton").on('click',  function () {
+  location.href = "/manuscript";
+});
+$(".right__main__content__btn").on('click',  function () {
+  location.href = "/condition";
+});
+$(".logo").on('click',  function () {
+  location.href = "/";
+});
+
+
 
 $(".dropdown__menu").on('click', function(){
-    $(".btn__dropup").toggleClass("show__arrow");
-    $('.btn__dropdown').toggleClass("hide__arrow");
-    const element = document.querySelector(".dropdown__list");
-    element.classList.add("animate__animated", "animate__slideInLeft");
-    element.style.setProperty('--animate-duration', '1s');
-    $('.dropdown__list').toggle();
+  $(".btn__dropup").toggleClass("show__arrow");
+  $('.btn__dropdown').toggleClass("hide__arrow");
+  const element = document.querySelector(".dropdown__list");
+  element.classList.add("animate__animated", "animate__slideInLeft");
+  element.style.setProperty('--animate-duration', '1s');
+  $('.dropdown__list').toggle();
 
 })
+var selector = '.sidebar__content ul li';
+$(selector).on('click', function(){
+  $(selector).removeClass('active');
+  $(this).addClass('active');
+});

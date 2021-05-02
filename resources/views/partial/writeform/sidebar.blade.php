@@ -1,7 +1,7 @@
 <div class="write__form__sidebar">
     <div class="sidebar__content">
         <ul>
-            <li>
+            <li class="active">
                 <a href="/write_form">
                     <p class="icon">1</p>
                     <span class="list">Soumettre un manuscrit</span>

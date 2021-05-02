@@ -1,7 +1,6 @@
 @import '_variables';
 *{
     padding:0;
-    font-family: $font-stack-regular;
 }
 body{
     overflow:hidden !important;
@@ -47,7 +46,7 @@ body{
     }
 
     h1 {
-        font-family: $font-stack-bold;
+
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
@@ -359,7 +358,7 @@ body{
 
     }
 
-
+   
 
 }
 
@@ -458,7 +457,7 @@ body{
     }
 
     @media (min-width: $breakpoint-large-desktop) {
-        max-width: 67.5%;
+        max-width: 62.5%;
     }
 }
 
@@ -934,8 +933,8 @@ body{
 
 .page__line{
     height: 1px;
-  margin: 16px 0 0;
-  background: $secondary-variant;
+    margin: 32px 1px 32px 0;
+    background: $secondary-variant;
 }
 
 
@@ -1065,11 +1064,4 @@ body{
         margin-bottom: 40px;
         margin-top: 20px;
     }
-}
-
-
-.page__line{
-    height: 1px;
-  margin: 32px 1px 32px 0;
-  background: $secondary-variant;
 }
