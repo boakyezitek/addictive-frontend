@@ -1,4 +1,4 @@
-@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);/*!
+@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);/*!
  * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
@@ -336,9 +336,173 @@
   border: solid 1px #e2e0e6;
 }
 
+.condition__wrapper {
+  width: 570px !important;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.condition__wrapper .condition__title {
+  font-family: BrandonGrotesque;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 43px;
+  letter-spacing: normal;
+  color: #f66757;
+}
+
+.condition__wrapper .condition_subtitle {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.condition__wrapper .condition__list .condition__item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+}
+
+.condition__wrapper .condition__list .condition__item .condition__item__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.condition__wrapper .condition__list .condition__item .condition__item__content .list__title {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.condition__wrapper .condition__list .condition__item .condition__item__content .list__subtitle {
+  font-family: BrandonGrotesque;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #898394;
+}
+
+.condition__wrapper .condition__list .condition__item .condition__item__content hr {
+  width: 100%;
+  height: 1px;
+  background-color: #e2e0e6;
+}
+
+.condition__wrapper button {
+  width: 198px;
+  height: 50px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #f66757;
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.manu__wrapper {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.manu__wrapper p.manu__title {
+  font-family: BrandonGrotesque;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 43px;
+  letter-spacing: normal;
+  color: #f66757;
+}
+
+.manu__wrapper span {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.manu__wrapper p.manu__context {
+  font-family: BrandonGrotesque;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.manu__wrapper input {
+  height: 48px;
+  margin: 20px 0;
+  padding: 12px 12px 12px 16px;
+  opacity: 0.1;
+  border-radius: 8px;
+  background-color: #898394;
+}
+
+.manu__wrapper textarea {
+  height: 142px;
+  margin: 20px 0 0;
+  padding: 12px 12px 59px 16px;
+  opacity: 0.1;
+  border-radius: 8px;
+  background-color: #898394;
+}
+
+.manu__wrapper .btn__area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.manu__wrapper .btn__area button {
+  width: 198px;
+  height: 50px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #f66757;
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.manu__wrapper .msg__context {
+  display: flex;
+  justify-content: flex-start;
+}
+
 * {
   padding: 0;
-  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 body {
@@ -390,7 +554,6 @@ body {
 }
 
 .slide-content h1 {
-  font-family: "Brandon Grotesque Black", sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -552,7 +715,7 @@ body {
 }
 
 .add_navbar .add_menu_box .add_main_menu ul li a {
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
@@ -577,7 +740,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #f66757;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 .add_navbar .add_menu_box .add_outline_btn .writeform__btn {
@@ -821,7 +984,7 @@ body {
   display: inline-block;
   line-height: 48px;
   cursor: pointer;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 @media (min-width: 320px) {
@@ -851,7 +1014,7 @@ body {
 
 @media (min-width: 1920px) {
   .add__custom__container {
-    max-width: 67.5%;
+    max-width: 62.5%;
   }
 }
 
@@ -974,7 +1137,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
@@ -1017,7 +1180,7 @@ body {
   display: inline-block;
   color: #fff;
   background: none;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
   height: 48px;
 }
 
@@ -1056,7 +1219,7 @@ body {
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
   background-color: #ffffff;
   color: #f66757;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 @media (min-width: 320px) {
@@ -1115,7 +1278,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
@@ -1158,7 +1321,7 @@ body {
   display: inline-block;
   color: #fff;
   background: none;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
   height: 48px;
 }
 
@@ -1197,7 +1360,7 @@ body {
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
   background-color: #ffffff;
   color: #f66757;
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
 }
 
 @media (min-width: 320px) {
@@ -1295,7 +1458,7 @@ body {
 }
 
 .add__footer .footer__container .add__footer__link__box a {
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -1334,7 +1497,7 @@ body {
 }
 
 .add__copyright__footer .last_footer__container span {
-  font-family: "Brandon Grotesque Light", sans-serif;
+  font-family: "Brandon Grotesque";
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -1391,7 +1554,7 @@ body {
 
 .page__line {
   height: 1px;
-  margin: 16px 0 0;
+  margin: 32px 1px 32px 0;
   background: #e2e0e6;
 }
 
@@ -1539,15 +1702,9 @@ body {
   margin-top: 20px;
 }
 
-.page__line {
-  height: 1px;
-  margin: 32px 1px 32px 0;
-  background: #e2e0e6;
-}
-
 .write__form__container {
   padding: 30px 0;
-  width: 1200px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -1555,42 +1712,39 @@ body {
 }
 
 .write__form__container .write__form__sidebar {
-  width: 30%;
+  width: 27%;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5em;
+.write__form__container .write__form__sidebar .sidebar__content li {
+  list-style: none;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content .sidebar_area {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: baseline;
+.write__form__container .write__form__sidebar .sidebar__content li a {
+  font-family: BrandonGrotesque;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 34px;
+  letter-spacing: normal;
+  color: #898394;
+  text-decoration: none;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__number {
+.write__form__container .write__form__sidebar .sidebar__content li a p.icon {
+  background-color: #f3f3f4;
+  color: #898394;
   width: 34px;
-  height: 32px;
-  margin: 0 20px 0 0;
-  padding: 4px 14px 5px;
   border-radius: 20px;
-  background-color: #898394;
+  text-align: center;
+  height: 34px;
+  display: inline-block;
+  margin-bottom: 2rem;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__number .active {
-  background-color: #ffe6e3;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__label .active {
-  background-color: #ffe6e3;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content .sidebar_area .sidebar__label {
+.write__form__container .write__form__sidebar .sidebar__content li a span.list {
+  height: 26px;
+  margin: 3px 0 3px 20px;
   font-family: BrandonGrotesque;
   font-size: 18px;
   font-weight: normal;
@@ -1598,6 +1752,25 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  display: inline-block;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content li.active {
+  list-style-type: none;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content li.active a {
+  color: #ffe6e3;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content li.active a p.icon {
+  color: #f66757;
+  background-color: #ffe6e3;
+}
+
+.write__form__container .write__form__sidebar .sidebar__content li.active a span.list {
+  color: #f66757;
+  font-weight: bold;
 }
 
 .write__form__container .write__form__content .right__main__content {
@@ -1619,7 +1792,7 @@ body {
 }
 
 .write__form__container .write__form__content .right__main__content .right__main__content__context .context {
-  width: 672px !important;
+  width: 672px;
 }
 
 .write__form__container .write__form__content .right__main__content .right__main__content__btn {
@@ -1814,7 +1987,7 @@ body {
 }
 
 .c__title {
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -2123,7 +2296,7 @@ body {
 }
 
 .book__details__main__box .book__details__container .details__content__box .large__page__title {
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 34px;
   font-weight: bold;
   font-stretch: normal;
@@ -2150,7 +2323,7 @@ body {
 }
 
 .small__heading {
-  font-family: "Brandon Grotesque Black", sans-serif;
+  font-family: brandon-grotesque, sans-serif;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
