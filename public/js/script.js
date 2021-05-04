@@ -95,3 +95,14 @@ $(selector).on('click', function(){
   $(selector).removeClass('active');
   $(this).addClass('active');
 });
+
+$('.mobile').on('click', function(){
+    const element = document.querySelector(".col-md-2");
+    element.classList.add("animate__animated", "animate__slideInDown");
+    element.style.setProperty('--animate-duration', '0.8s');
+    $('.col-md-2').show();
+})
+
+$('.close__button').on('click', function(){
+    $('.col-md-2').hide();
+})

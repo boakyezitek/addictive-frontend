@@ -2015,7 +2015,53 @@ body {
 }
 
 .row__box .col-md-2 {
-  max-width: 230px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  padding-right: 10px;
+  padding-top: 20px;
+  overflow: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .row__box .col-md-2 {
+    overflow: initial !important;
+    position: relative;
+    max-width: 230px;
+    padding-top: 0px;
+    display: block;
+  }
+}
+
+.row__box .col-md-2 .break__box {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .row__box .col-md-2 .break__box {
+    display: none;
+  }
+}
+
+.row__box .col-md-10 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+@media (min-width: 768px) {
+  .row__box .col-md-10 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 .row__box .catalog__search__input {
@@ -2040,6 +2086,26 @@ body {
   outline: none;
 }
 
+.row__box .news_content {
+  margin-top: -50px;
+}
+
+@media (min-width: 768px) {
+  .row__box .news_content {
+    margin-top: initial;
+  }
+}
+
+.row__box .news_content .news__item {
+  padding-left: 0px;
+}
+
+@media (min-width: 768px) {
+  .row__box .news_content .news__item {
+    padding-left: 15px;
+  }
+}
+
 .page__outline__input {
   min-width: 210px;
   height: 48px;
@@ -2047,6 +2113,13 @@ body {
   border-radius: 8px;
   border: solid 1px #141415;
   text-align: center;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .page__outline__input {
+    display: flex;
+  }
 }
 
 .c__title {
@@ -2184,6 +2257,115 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: #141415;
+}
+
+.mobile__filter__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .mobile__filter__title {
+    display: none;
+  }
+}
+
+.mobile__filter__title h4 {
+  font-family: "Brandon Grotesque Black", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.mobile__filter__title span {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #898394;
+}
+
+.close__button {
+  width: 40px;
+  height: 40px;
+  background: #f66757;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .close__button {
+    display: none;
+    margin-bottom: 0px;
+  }
+}
+
+.mobile__button {
+  height: 48px;
+  display: flex;
+  width: 100%;
+  background: #f66757;
+  justify-content: center;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .mobile__button {
+    display: none;
+  }
+}
+
+.filter__main__box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.filter__main__box .mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .filter__main__box .mobile {
+    display: none;
+  }
+}
+
+.filter__main__box .mobile .active {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #f66757;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 .letter__box {

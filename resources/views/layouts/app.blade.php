@@ -22,6 +22,10 @@
     <link href="{{ asset('css/brandon-grotesque-regular.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slick.css') }}" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
@@ -31,9 +35,9 @@
     <main>
         @yield('content')
     </main>
- 
+
      <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> 
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}" defer></script>
     <script src="{{ asset('js/mobilescript.js') }}" defer></script>
