@@ -1,4 +1,4 @@
-@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);/*!
+@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);/*!
  * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
@@ -292,9 +292,25 @@
   flex-wrap: wrap;
 }
 
+.news_content .news__item {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .news_content .news__item {
+    display: block;
+    gap: 1.2em;
+    align-items: center;
+    padding-left: 10px;
+  }
+}
+
 .news_content .new__mask {
-  width: 170px;
-  height: 235px;
+  width: 121px;
+  height: 168px;
   margin: 0 0 4px;
   border-radius: 8px;
   -o-object-fit: cover;
@@ -302,6 +318,20 @@
   overflow: hidden;
   margin-top: 20px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.07) !important;
+}
+
+@media (min-width: 375px) {
+  .news_content .new__mask {
+    width: 150px;
+    height: 205px;
+  }
+}
+
+@media (min-width: 768px) {
+  .news_content .new__mask {
+    width: 170px;
+    height: 235px;
+  }
 }
 
 .news_content .new__mask img {
@@ -334,6 +364,19 @@
   justify-content: center;
   border-radius: 8px;
   border: solid 1px #e2e0e6;
+}
+
+.upcoming__content {
+  gap: 0.6em !important;
+}
+
+.upcoming {
+  display: block !important;
+}
+
+.upcoming .new_mask {
+  width: 106px;
+  height: 182px;
 }
 
 .condition__wrapper {
@@ -715,7 +758,7 @@ body {
 }
 
 .add_navbar .add_menu_box .add_main_menu ul li a {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
@@ -740,7 +783,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #f66757;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 .add_navbar .add_menu_box .add_outline_btn .writeform__btn {
@@ -984,7 +1027,7 @@ body {
   display: inline-block;
   line-height: 48px;
   cursor: pointer;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 @media (min-width: 320px) {
@@ -1002,8 +1045,14 @@ body {
 }
 
 .add__custom__container {
-  max-width: 100%;
+  max-width: 93%;
   margin: auto;
+}
+
+@media (min-width: 360px) {
+  .add__custom__container {
+    max-width: 89%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1137,7 +1186,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
@@ -1180,7 +1229,7 @@ body {
   display: inline-block;
   color: #fff;
   background: none;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
   height: 48px;
 }
 
@@ -1219,7 +1268,7 @@ body {
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
   background-color: #ffffff;
   color: #f66757;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 @media (min-width: 320px) {
@@ -1278,7 +1327,7 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group {
@@ -1321,7 +1370,7 @@ body {
   display: inline-block;
   color: #fff;
   background: none;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
   height: 48px;
 }
 
@@ -1360,7 +1409,7 @@ body {
 .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
   background-color: #ffffff;
   color: #f66757;
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 @media (min-width: 320px) {
@@ -1458,7 +1507,7 @@ body {
 }
 
 .add__footer .footer__container .add__footer__link__box a {
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -1497,7 +1546,7 @@ body {
 }
 
 .add__copyright__footer .last_footer__container span {
-  font-family: "Brandon Grotesque";
+  font-family: "Brandon Grotesque Light", sans-serif;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -1534,8 +1583,15 @@ body {
   display: flex;
   align-items: center;
   gap: 0.3em;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+@media (min-width: 768px) {
+  .page_breadcrumb {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .page_breadcrumb li {
@@ -1554,8 +1610,15 @@ body {
 
 .page__line {
   height: 1px;
-  margin: 32px 1px 32px 0;
+  margin: 0 16px 0 0;
   background: #e2e0e6;
+}
+
+@media (min-width: 768px) {
+  .page__line {
+    max-width: 89%;
+    margin: 32px 1px 32px 0;
+  }
 }
 
 /* @mobile styles*/
@@ -1987,7 +2050,7 @@ body {
 }
 
 .c__title {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -2296,7 +2359,7 @@ body {
 }
 
 .book__details__main__box .book__details__container .details__content__box .large__page__title {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 34px;
   font-weight: bold;
   font-stretch: normal;
@@ -2323,7 +2386,7 @@ body {
 }
 
 .small__heading {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;

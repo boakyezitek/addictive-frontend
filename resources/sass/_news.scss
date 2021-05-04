@@ -5,12 +5,35 @@
     align-items: center;
     flex-wrap: wrap;
 
+    .news__item{
+        display: flex;
+        gap: 1.2em;
+        align-items: center;
+        padding-left: 10px;
+    }
+    @media(min-width:$breakpoint-tablet){
+        .news__item{
+            display: block;
+            gap: 1.2em;
+            align-items: center;
+            padding-left: 10px;
+        }
+      }
     .new__mask{
-        width: 170px;
-        height: 235px;
+
+        width: 121px;
+        height: 168px;
         margin: 0 0 4px;
         border-radius: 8px;
+        @media(min-width:$breakpoint-small-mobile2){
+            width: 150px;
+            height: 205px;
+        }
 
+        @media(min-width:$breakpoint-tablet){
+            width: 170px;
+            height: 235px;
+        }
         object-fit: cover;
         overflow: hidden;
         margin-top: 20px;

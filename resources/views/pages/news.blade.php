@@ -6,7 +6,7 @@
        @include('components.breadcrumb')
        <div class="page__line"></div>
 
-       @include("partial.news.news");
+       @include("partial.news.news")
   </div>
 </section>
 
