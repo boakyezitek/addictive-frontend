@@ -546,6 +546,7 @@
 
 * {
   padding: 0;
+  font-family: "Brandon Grotesque Light", sans-serif;
 }
 
 body {
@@ -2404,81 +2405,119 @@ body {
   flex-wrap: wrap;
 }
 
-.user__box .avatar__box {
-  width: 210px;
-  height: 150px;
-  padding: 16px;
-  border-radius: 8px;
-  border: solid 1px #e2e0e6;
-  text-align: center;
-  background: #ffffff;
-}
-
-.user__box .avatar__box .avatal {
-  width: 48px;
-  height: 48px;
-  margin: 0 65px 12px;
-  line-height: 48px;
+.user__box .mobile_avatar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: initial;
+  gap: 1em;
+  text-align: initial;
+  border: none;
+  border-radius: none;
+  padding: 0px;
+  width: a;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .user__box .mobile_avatar {
+    width: 210px;
+    height: 150px;
+    padding: 16px;
+    border-radius: 8px;
+    border: solid 1px #e2e0e6;
+    text-align: center;
+    background: #ffffff;
+    display: initial;
+  }
+}
+
+.user__box .mobile_avatar .avatal {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
   font-family: "Courgette", cursive;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   text-align: center;
   border-radius: 100%;
+  margin: none;
+  margin-top: -20px;
 }
 
-.user__box .avatar__box .red {
+@media (min-width: 768px) {
+  .user__box .mobile_avatar .avatal {
+    margin: 0 65px 12px;
+  }
+}
+
+.user__box .mobile_avatar .user__info {
+  flex: 1;
+  width: 75vw;
+}
+
+.user__box .mobile_avatar .red {
   background-color: #f66757;
   color: #fff;
 }
 
-.user__box .avatar__box .blue {
+.user__box .mobile_avatar .blue {
   background-color: #75a8e8;
   color: #fff;
 }
 
-.user__box .avatar__box .dark {
+.user__box .mobile_avatar .dark {
   background-color: #e2e0e6;
   color: #fff;
 }
 
-.user__box .avatar__box .pink {
+.user__box .mobile_avatar .pink {
   background-color: #e293ca;
   color: #fff;
 }
 
-.user__box .avatar__box .green {
+.user__box .mobile_avatar .green {
   background-color: #6dc4ad;
   color: #fff;
 }
 
-.user__box .avatar__box h4 {
+.user__box .mobile_avatar h4 {
   margin: 12px 0 4px;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
   color: #141415;
 }
 
-.user__box .avatar__box span {
+.user__box .mobile_avatar span {
   font-size: 16px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
   color: #f66757;
+}
+
+.user__box .mobile_avatar .mobile-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e2e0e6;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  display: inherit;
+}
+
+@media (min-width: 768px) {
+  .user__box .mobile_avatar .mobile-line {
+    display: none;
+  }
 }
 
 .book__details__main__box {

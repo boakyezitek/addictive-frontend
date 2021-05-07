@@ -1,5 +1,8 @@
 <div class="row__box">
     <div class="col-md-2">
+        <div class="close__button">
+            <img src="img/main/ic-close.svg" />
+        </div>
         <div class="page__outline__input">Réinitialiser les filtres</div>
          <div class="filter__Box">
               <h5 class="c__title mt-4 mb-4">Sélection alphabétique</h5>
