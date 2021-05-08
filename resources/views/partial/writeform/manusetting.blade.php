@@ -33,7 +33,7 @@
 
 
     <div class="btn__area">
-        <button id="annuler__btn" class="submit-button">Annuler</button>
+        <button id="annuler__btn v-pills-settings-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="submit-button">Annuler</button>
         <button id="myButton" class="submit-button">Étape suivante</button>
     </div>
 </div>

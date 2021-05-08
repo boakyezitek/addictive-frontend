@@ -52,7 +52,7 @@
                 border: solid 1px $secondary-variant;
                 text-align: center;
                 background: $surface;
-                display: initial;
+                display:initial;
         }
         .avatal{
             width: 48px;
@@ -79,6 +79,10 @@
         .user__info{
             flex: 1;
             width:75vw;
+
+            @media (min-width:$breakpoint-tablet) {
+                width: auto;
+            }
         }
 
         .red{

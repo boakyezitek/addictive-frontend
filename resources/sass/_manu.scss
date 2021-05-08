@@ -1,12 +1,12 @@
 .manu__wrapper{
-    width: 45%;
+    max-width: 68%;
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
     gap:0.5em;
 
     p.manu__title{
-        font-family: BrandonGrotesque;
+        font-family:$font-stack-bold;
         font-size: 30px;
         font-weight: bold;
         font-stretch: normal;
@@ -16,7 +16,6 @@
         color: $primary;
     }
     span{
-        font-family: BrandonGrotesque;
         font-size: 18px;
         font-weight: 500;
         font-stretch: normal;
@@ -26,7 +25,6 @@
         color: $on-background;
     }
     p.manu__context{
-        font-family: BrandonGrotesque;
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;

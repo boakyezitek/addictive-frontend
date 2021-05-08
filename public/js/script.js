@@ -69,15 +69,15 @@ $("#searchBar").on('focus', function(){
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
 });
-$("#myButton").on('click',  function () {
-  location.href = "/manuscript";
-});
-$(".right__main__content__btn").on('click',  function () {
-  location.href = "/condition";
-});
-$(".logo").on('click',  function () {
-  location.href = "/";
-});
+// $("#myButton").on('click',  function () {
+//   location.href = "/manuscript";
+// });
+// $(".right__main__content__btn").on('click',  function () {
+//   location.href = "/condition";
+// });
+// $(".logo").on('click',  function () {
+//   location.href = "/";
+// });
 
 
 

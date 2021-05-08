@@ -388,7 +388,7 @@
 }
 
 .condition__wrapper .condition__title {
-  font-family: BrandonGrotesque;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -399,7 +399,6 @@
 }
 
 .condition__wrapper .condition_subtitle {
-  font-family: BrandonGrotesque;
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -422,7 +421,6 @@
 }
 
 .condition__wrapper .condition__list .condition__item .condition__item__content .list__title {
-  font-family: BrandonGrotesque;
   font-size: 18px;
   font-weight: 500;
   font-stretch: normal;
@@ -433,7 +431,6 @@
 }
 
 .condition__wrapper .condition__list .condition__item .condition__item__content .list__subtitle {
-  font-family: BrandonGrotesque;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -462,7 +459,7 @@
 }
 
 .manu__wrapper {
-  width: 45%;
+  max-width: 68%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -470,7 +467,7 @@
 }
 
 .manu__wrapper p.manu__title {
-  font-family: BrandonGrotesque;
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -481,7 +478,6 @@
 }
 
 .manu__wrapper span {
-  font-family: BrandonGrotesque;
   font-size: 18px;
   font-weight: 500;
   font-stretch: normal;
@@ -492,7 +488,6 @@
 }
 
 .manu__wrapper p.manu__context {
-  font-family: BrandonGrotesque;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -1766,78 +1761,29 @@ body {
   margin-top: 20px;
 }
 
-.write__form__container {
-  padding: 30px 0;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
+.write__form__sidebar {
+  min-width: 27%;
 }
 
-.write__form__container .write__form__sidebar {
-  width: 27%;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content li {
-  list-style: none;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content li a {
-  font-family: BrandonGrotesque;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 34px;
-  letter-spacing: normal;
-  color: #898394;
-  text-decoration: none;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content li a p.icon {
-  background-color: #f3f3f4;
-  color: #898394;
-  width: 34px;
-  border-radius: 20px;
-  text-align: center;
-  height: 34px;
-  display: inline-block;
-  margin-bottom: 2rem;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content li a span.list {
-  height: 26px;
-  margin: 3px 0 3px 20px;
-  font-family: BrandonGrotesque;
-  font-size: 18px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  display: inline-block;
-}
-
-.write__form__container .write__form__sidebar .sidebar__content li.active {
+.write__form__sidebar .sidebar__content li.active {
   list-style-type: none;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content li.active a {
+.write__form__sidebar .sidebar__content li.active a {
   color: #ffe6e3;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content li.active a p.icon {
+.write__form__sidebar .sidebar__content li.active a p.icon {
   color: #f66757;
   background-color: #ffe6e3;
 }
 
-.write__form__container .write__form__sidebar .sidebar__content li.active a span.list {
+.write__form__sidebar .sidebar__content li.active a span.list {
   color: #f66757;
   font-weight: bold;
 }
 
-.write__form__container .write__form__content .right__main__content {
+.write__form__content .right__main__content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1845,8 +1791,8 @@ body {
   gap: 1.5em;
 }
 
-.write__form__container .write__form__content .right__main__content .right__main__content__title p {
-  font-family: BrandonGrotesque;
+.write__form__content .right__main__content .right__main__content__title p {
+  font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 38px;
   font-weight: bold;
   font-stretch: normal;
@@ -1855,11 +1801,11 @@ body {
   letter-spacing: normal;
 }
 
-.write__form__container .write__form__content .right__main__content .right__main__content__context .context {
+.write__form__content .right__main__content .right__main__content__context .context {
   width: 672px;
 }
 
-.write__form__container .write__form__content .right__main__content .right__main__content__btn {
+.write__form__content .right__main__content .right__main__content__btn {
   width: 214px;
   height: 48px;
   border-radius: 8px;
@@ -1871,8 +1817,7 @@ body {
   margin-right: 50px;
 }
 
-.write__form__container .write__form__content .right__main__content .right__main__content__btn p {
-  font-family: BrandonGrotesque;
+.write__form__content .right__main__content .right__main__content__btn p {
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
@@ -1881,6 +1826,66 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+}
+
+.nav-pills .nav-link {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #141415;
+  margin-right: none !important;
+  border-radius: 0px;
+  border: none !important;
+  gap: none;
+}
+
+.writers_side__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.writers_side__menu a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.2em !important;
+}
+
+.writers_side__menu a p {
+  width: 34px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+  border-radius: 100%;
+  color: #898394;
+  margin-top: 15px;
+}
+
+.writers_side__menu a span {
+  color: #898394;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background: none !important;
+  color: #f66757 !important;
+}
+
+.nav-pills .nav-link.active .active,
+.nav-pills .show > .nav-link .active {
+  background: #f66757;
+  color: #fff;
+}
+
+.nav-pills .nav-link.active span,
+.nav-pills .show > .nav-link span {
+  color: #f66757 !important;
 }
 
 .add__contact__section {
@@ -2456,6 +2461,12 @@ body {
 .user__box .mobile_avatar .user__info {
   flex: 1;
   width: 75vw;
+}
+
+@media (min-width: 768px) {
+  .user__box .mobile_avatar .user__info {
+    width: auto;
+  }
 }
 
 .user__box .mobile_avatar .red {

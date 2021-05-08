@@ -6,7 +6,7 @@
     gap:1.5em;
 
     .condition__title{
-        font-family: BrandonGrotesque;
+        font-family: $font-stack-bold;
         font-size: 30px;
         font-weight: bold;
         font-stretch: normal;
@@ -16,7 +16,6 @@
         color: $primary;
     }
     .condition_subtitle{
-        font-family: BrandonGrotesque;
         font-size: 18px;
         font-weight: normal;
         font-stretch: normal;
@@ -35,7 +34,6 @@
                 display: flex;
                 flex-wrap: wrap;
                 .list__title{
-                    font-family: BrandonGrotesque;
                     font-size: 18px;
                     font-weight: 500;
                     font-stretch: normal;
@@ -45,7 +43,6 @@
                     color: $on-background;
                 }
                 .list__subtitle{
-                    font-family: BrandonGrotesque;
                     font-size: 16px;
                     font-weight: normal;
                     font-stretch: normal;
@@ -53,7 +50,7 @@
                     line-height: normal;
                     letter-spacing: normal;
                     color: $on-surface;
-                  
+
                 }
                 hr{
                     width: 100%;

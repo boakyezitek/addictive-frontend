@@ -22,7 +22,7 @@
     <textarea name="presentation" class="presentation">
     </textarea>
     <div class="btn__area">
-        <button id="myButton" class="submit-button">Annuler</button>
-        <button id="myButton" class="submit-button">Étape suivante</button>
+        <button id="myButton v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" class="submit-button nav-pills">Annuler</button>
+        <button id="myButton v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" class="submit-button">Étape suivante</button>
     </div>
 </div>

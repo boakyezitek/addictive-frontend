@@ -52,5 +52,5 @@
             </div>
         </div>
     </div>
-    <button id="myButton" class="float-left submit-button" >Accéder au formulaire</button>
+    <button id="myButton v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="float-left submit-button" >Accéder au formulaire</button>
 </div>
