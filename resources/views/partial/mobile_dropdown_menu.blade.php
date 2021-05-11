@@ -1,3 +1,48 @@
+<div class="mobile__drop__down">
+    <h5 class="titles">Auteure</h5>
+    <div class="line"></div>
+    <div class="title__list__box">
+        <h4>Emma Green</h4>
+        <div>6 livres disponibles</div>
+    </div>
+    <h5 class="titles">Livres</h5>
+    <div class="line"></div>
+
+    <div class="search__item">
+        <img src="img/search_bar/book-2.png" />
+        <div>
+            <h5>Ame indocile</h5>
+            <p>Emma Green</p>
+        </div>
+    </div>
+
+    <div class="search__item">
+        <img src="img/search_bar/book-2.png" />
+        <div>
+            <h5>Ame indocile</h5>
+            <p>Emma Green</p>
+        </div>
+    </div>
+
+    <div class="search__item">
+        <img src="img/search_bar/book-2.png" />
+        <div>
+            <h5>Ame indocile</h5>
+            <p>Emma Green</p>
+        </div>
+    </div>
+
+    <div class="search__item">
+        <img src="img/search_bar/book-2.png" />
+        <div>
+            <h5>Ame indocile</h5>
+            <p>Emma Green</p>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="mobile__menu__box" style="display:none;">
     <div class="mobile__navbar__menu">
         <ul>

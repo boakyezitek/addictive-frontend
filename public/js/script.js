@@ -60,15 +60,21 @@ $("#hide-search").on("click", function() {
 });
 
 
-$("#searchBar").on('focus', function(){
+$("#searchBar").on('click', function(){
   $(".search__drop__down__box").css("display", "inline").fadeIn(2000);
 
 });
-
+$(".search__drop__down__box").on('mouseover', function(){
+    $(".search__drop__down__box").css("display", "inline").fadeIn(2000);
+  });
 
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
 });
+
+
+
+
 // $("#myButton").on('click',  function () {
 //   location.href = "/manuscript";
 // });
