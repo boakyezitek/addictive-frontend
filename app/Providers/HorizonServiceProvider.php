@@ -2,9 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Admin;
+use Laravel\Horizon\Horizon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
-use Laravel\Horizon\Horizon;
 use Laravel\Horizon\HorizonApplicationServiceProvider;
 
 class HorizonServiceProvider extends HorizonApplicationServiceProvider
@@ -34,8 +35,22 @@ class HorizonServiceProvider extends HorizonApplicationServiceProvider
      */
     protected function gate()
     {
-        Gate::define('viewHorizon', function ($admin) {
-            return Auth::guard('admin')->check() && Auth::guard('admin')->user()->isSuperAdmin();
+        Gate::define('viewHorizon', function ($user) {
+            return true;
+        });
+    }
+
+    /**
+     * Configure the Horizon authorization services.
+     *
+     * @return void
+     */
+    protected function authorization()
+    {
+        $this->gate();
+        Horizon::auth(function ($request) {
+            return app()->environment('local') ||
+                   Gate::forUser($request->user('admin'))->check('viewHorizon');
         });
     }
 }

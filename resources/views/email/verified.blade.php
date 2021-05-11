@@ -13,14 +13,8 @@
                   <path fill="#D8E3EC" d="M0 0h100v2H0z"></path>
                 </svg>
                 <p>
-                    Félicitations, vous allez être redirigé sur l'application ! 
+                    Félicitations, votre adresse email est vérifiée ! Vous avez dorénavant la possibilité de vous connecter sur l'application mobile.
                 </p>
-                <p>
-                    Si malgrès tout vous n'êtes pas redirgié correctement voici un lien vous redirigeant sur l'application 
-                </p>
-                <a href="{{ route('app.login', ['email' => $email]) }}" class="w-full btn btn-default btn-primary hover:bg-primary-dark text-center" type="submit">
-                    Ouvrir l'application
-                </a>
             </div>
         </div>
     </div>

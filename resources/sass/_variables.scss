@@ -1,11 +1,14 @@
 // Body
 $body-bg: #f8fafc;
-@import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+// @import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+// @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url(https://use.typekit.net/pbs7jdv.css);
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-stack-regular:'Brandon Grotesque';
+$font-family-sans-serif: 'Brandon Grotesque Light', sans-serif;
+$font-stack-regular:'Brandon Grotesque Light', sans-serif;
 $font-stack-medium:'Brandon Grotesque Medium', sans-serif;
-$font-stack-bold:brandon-grotesque, sans-serif;
+$font-stack-bold:'Brandon Grotesque Black', sans-serif;
+
 $font-courgette:'Courgette', cursive;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
@@ -47,4 +50,5 @@ $breakpoint-small-mobile-360: 360px;
 $breakpoint-small-mobile2: 375px;
 $breakpoint-mobile: 411px;
 $breakpoint-tablet:768px;
+$breakpoint-small-desktop: 1440px;
 $breakpoint-large-desktop: 1920px;

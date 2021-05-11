@@ -7,9 +7,51 @@
     padding-bottom: 50px;
 
     .col-md-2{
-        max-width: 230px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99999;
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        padding-right: 10px;
+        padding-top: 20px;
+        overflow: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: none;
+        @media (min-width: $breakpoint-tablet) {
+            overflow: initial !important;
+            position:relative;
+            max-width: 230px;
+            padding-top: 0px;
+            display: block;
+        }
+
+        .break__box{
+            display: block;
+            @media (min-width: $breakpoint-tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .col-md-10{
+        padding-right: 0px;
+        padding-left: 0px;
+        @media (min-width: $breakpoint-tablet) {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
     }
     .catalog__search__input{
+      @media (max-width:$breakpoint-mobile) {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
         background: #f3f3f4;
         height: 48px;
         display: flex;
@@ -31,6 +73,29 @@
         }
     }
 
+    .news_content{
+        margin-top: -50px;
+        @media (min-width:$breakpoint-small-mobile-360){
+          margin-top:initial;
+        }
+        @media (min-width: $breakpoint-tablet) {
+             margin-top: initial;
+        }
+        .news__item{
+            padding-left: 0px;
+            @media (min-width: $breakpoint-tablet) {
+              padding-left: 15px;
+            }
+            @media (max-width: $breakpoint-mobile) {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+              align-items: center;
+          }
+        }
+    }
+
 }
 .page__outline__input{
     min-width: 210px;
@@ -39,6 +104,12 @@
   border-radius: 8px;
   border: solid 1px $on-background;
   text-align: center;
+
+  display: none;
+
+  @media(min-width:$breakpoint-tablet){
+    display: flex;
+  }
 }
 
 .c__title{
@@ -194,3 +265,101 @@ letter-spacing: normal;
           }
       }
   }
+
+
+  .mobile__filter__title{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 12px;
+      @media (min-width:$breakpoint-tablet){
+        display: none;
+   }
+      h4{
+          font-family: $font-stack-bold;
+          font-size: 30px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+        color: $on-background;
+      }
+
+      span{
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: $on-surface;
+      }
+  }
+
+  .close__button{
+    width: 40px;
+    height: 40px;
+    background: $primary;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 30px;
+
+    @media (min-width:$breakpoint-tablet){
+        display: none;
+        margin-bottom: 0px;
+   }
+  }
+
+  .mobile__button{
+    height: 48px;
+    display: flex;
+    width: 100%;
+    background: $primary;
+    justify-content: center;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    margin-right: 10px;
+
+    @media (min-width:$breakpoint-tablet){
+         display: none;
+    }
+}
+
+.filter__main__box{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    .mobile{
+        display:flex;
+        @media (min-width:$breakpoint-tablet){
+            display: none;
+       }
+        .active{
+            display: flex;
+            width: 20px;
+            height: 20px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background: $primary;
+            color: #fff;
+            font-size: 14px;
+            font-family: $font-stack-regular;
+        }
+    }
+}

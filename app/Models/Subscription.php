@@ -25,7 +25,7 @@ class Subscription extends Model
         self::STATUS_REFUND
     ];
 
-    protected $fillable = ['user_id', 'reference', 'transaction_id', 'price', 'currency', 'purchased_at', 'expiration_at', 'status', 'renewed_at', 'renewed_count', 'interval', 'cancelled_at', 'period_type'];
+    protected $fillable = ['user_id', 'reference', 'transaction_id', 'price', 'currency', 'purchased_at', 'expiration_at', 'status', 'renewed_at', 'renewed_count', 'interval', 'cancelled_at', 'period_type', 'platform'];
 
     protected $casts = [
         'purchased_at' => 'datetime',

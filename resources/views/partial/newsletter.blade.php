@@ -7,7 +7,7 @@
            <span>Restez informé de toutes les actualités.</span>
            <div class="add__newsletter-input-group">
                <div class="add__newsletter__input__box">
-                   <input placeholder="Votre adresse mail"/>
+                   <input class="signup__email" placeholder="Votre adresse mail"/>
                    <img src="img/icons/ic-arrow-next.svg"
                    class="arrow">
                 </div>

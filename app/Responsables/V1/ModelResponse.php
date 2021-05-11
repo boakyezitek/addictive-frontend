@@ -16,11 +16,13 @@ class ModelResponse extends ResponseWithManager
 {
 
     private TransformerAbstract $transformer;
+    private int $per_page;
 
-    public function __construct($data, bool $as_collection)
+    public function __construct($data, bool $as_collection, $per_page = 15)
     {
         parent::__construct($data, $as_collection);
         $this->transformer = $data->getModel()->transformer();
+        $this->per_page = $per_page;
     }
 
     /**
@@ -45,7 +47,7 @@ class ModelResponse extends ResponseWithManager
      */
     public function toJsonCollectionResponse($collection)
     {
-        $paginator = $collection->paginate()->appends(request()->input());
+        $paginator = $collection->paginate($this->per_page)->appends(request()->input());
         $paginated_collection = $paginator->getCollection();
         $manager = new Manager();
         if (isset($_GET['include'])) {

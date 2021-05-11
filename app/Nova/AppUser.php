@@ -73,6 +73,13 @@ class AppUser extends ResourceForUser
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
+            Text::make(__('Hash id'), 'hash_id')
+                ->sortable()
+                ->rules('required')
+                ->withMeta(['extraAttributes' => [
+                    'placeholder' => 'BWy9leKRdk1b', ],
+                ]),
+
             Password::make(__('Password'), 'Password')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')

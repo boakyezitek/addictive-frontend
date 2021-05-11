@@ -49,7 +49,7 @@ class AudioBookController extends Controller
             $limit = null;
         }
 
-        $audioBooks = AudioBook::filters($type, $orderBy, $sorting, $string)->when($limit, function ($query, $limit) {
+        $audioBooks = AudioBook::where('is_visible', 1)->filters($type, $orderBy, $sorting, $string)->when($limit, function ($query, $limit) {
                 return $query->take($limit);
             });
 

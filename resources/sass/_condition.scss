@@ -1,12 +1,20 @@
 .condition__wrapper{
-    width: 570px !important;
+    width: 69%;
+    @media(max-width:426px){
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
     gap:1.5em;
 
     .condition__title{
-        font-family: BrandonGrotesque;
+        @media(max-width:$breakpoint-mobile){
+            font-size: 29px;
+        }
+        font-family: $font-stack-bold;
         font-size: 30px;
         font-weight: bold;
         font-stretch: normal;
@@ -62,16 +70,41 @@
                 }
             }
         }
+        .mobile__condition__footer{
+            display:none;
+            @media(max-width:$breakpoint-mobile){
+               display: block;
+               span{
+                font-family: BrandonGrotesque;
+                font-size: 18px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: $on-background;
+               }
+            }
+        }
     }
     button{
+        @media(max-width:$breakpoint-mobile){
+            width:100%;
+        }
         width: 198px;
         height: 50px;
-        padding: 12px 20px;
         border-radius: 8px;
         background-color: $primary;
         align-self: flex-end;
         border:none;
         outline: none;
-        color:$surface
+        color:$surface;
+        font-family: BrandonGrotesque;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
     }
 }

@@ -65,8 +65,6 @@ class UserController extends Controller
         ]);
 
         $user->claimInstallationId($request->attributes->get('installation_id'));
-
-        $user->sendRegisterNotification();
         
         event(new Registered($user));
 
@@ -255,9 +253,13 @@ class UserController extends Controller
      */
     public function credits(Request $request)
     {
-        $credit_count = $request->user()->getCreditsCount();
+        $platform = $request->header('X-MOBILE-OS');
+        $user = $request->user();
+        $credit_count = $user->getCreditsCount();
 
-        $expiration_count = $request->user()->credits()->whereNull('used_at')->where('expire_at', '>', Carbon::now())->where('expire_at', '<', Carbon::now()->addDays(30))->where('available_at', '<', Carbon::now())->count();
+        $subscribed = $user->isSubscribed();
+
+        $expiration_count = $user->credits()->whereNull('used_at')->where('expire_at', '>', Carbon::now())->where('expire_at', '<', Carbon::now()->addDays(30))->where('available_at', '<', Carbon::now())->count();
 
         $expiration_comment = null;
 
@@ -267,12 +269,45 @@ class UserController extends Controller
             $expiration_comment = $expiration_count." crédits expirent sous 30 jours ! N'oubliez pas de les utiliser.";
         }
 
-        return response()->json([
-            'data' => [
-                'available_credits' => $credit_count,
-                'expiration_comment' => $expiration_comment,
-            ]
-        ], 200);
+        if ($subscribed) {
+            $subscription = $user->activeSubscription();
+            if ($platform == 'android') {
+                if ($platform == $subscription->platform) {
+                    $subscription_comment = "Votre abonnement et la facturation sont gérés par votre compte Play Store";
+                    $can_manage_subscription = true;
+                } else {
+                    $subscription_comment = "Votre abonnement et la facturation sont gérés par une autre plateforme que celle du Play Store";
+                    $can_manage_subscription = false;
+                }
+            } elseif ($platform == 'ios') {
+                if ($platform == $subscription->platform) {
+                    $subscription_comment = "Votre abonnement et la facturation sont gérés par votre compte App Store.";
+                    $can_manage_subscription = true;
+                } else {
+                    $subscription_comment = "Votre abonnement et la facturation sont gérés par une autre plateforme que celle de l’App Store";
+                    $can_manage_subscription = false;
+                }
+            }
+
+            return response()->json([
+                'data' => [
+                    'available_credits' => $credit_count,
+                    'expiration_comment' => $expiration_comment,
+                    'subscription_comment' => $subscription_comment,
+                    'can_manage_subscription' => $can_manage_subscription,
+                ]
+            ], 200);
+        } else {
+            return response()->json([
+                'data' => [
+                    'available_credits' => $credit_count,
+                    'expiration_comment' => $expiration_comment,
+                    'subscription_comment' => null,
+                    'can_manage_subscription' => false,
+                ]
+            ], 200);
+        }
+
     }
 
     /**
@@ -312,6 +347,8 @@ class UserController extends Controller
 
         $user->accepted_free_subscription = true;
 
+        $user->interacted_free_subscription = true;
+
         $user->save();
     }
 
@@ -327,6 +364,8 @@ class UserController extends Controller
         $user = $request->user();
 
         $user->accepted_free_subscription = false;
+
+        $user->interacted_free_subscription = true;
 
         $user->save();
     }

@@ -22,6 +22,7 @@
     <link href="{{ asset('css/brandon-grotesque-regular.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slick-theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/slick.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
@@ -32,7 +33,7 @@
         @yield('content')
     </main>
  
-     <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script> 
     <script src="{{ asset('js/slick.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}" defer></script>

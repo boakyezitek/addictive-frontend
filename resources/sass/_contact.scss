@@ -1,11 +1,41 @@
 .add__contact__section{
     margin: 1.5em 0;
-    .contact-wrapper{
+    span.mobile__contact__title{
+        display: none;
         @media(max-width:$breakpoint-mobile){
-            width:90%;
+           display: block;
+           padding:8px 16px 7px 16px;
+           font-family: BrandonGrotesque;
+           font-size: 16px;
+           font-weight: normal;
+           font-stretch: normal;
+           font-style: normal;
+           line-height: normal;
+           letter-spacing: normal;
+           color: $on-background;
+           margin:0  !important;
         }
+    }
+
+
+    hr{
+        display: none;
+        @media(max-width:$breakpoint-mobile){
+            display: block;
+            width: calc(100% - 2em);
+            height: 1px;
+            background-color: $secondary-variant;
+            margin-top:0 !important;
+            margin-bottom:0 !important;
+        }
+    }
+    .contact-wrapper{
         @media(max-width:$breakpoint-tablet){
             width:80%;
+        }
+        @media(max-width:$breakpoint-mobile){
+            width:100%;
+            padding:1rem;
         }
         width:53%;
         display: flex;
@@ -14,10 +44,10 @@
         justify-content: space-between;
         margin-left:auto;
         margin-right:auto;
-        gap:1.5em;
+        // gap:1.5em;
+        gap:0;
 
         p.contact__title{
-            margin:1.5em 0  0;
             height: 54px;
             font-family: BrandonGrotesque;
             font-size: 38px;
@@ -27,6 +57,10 @@
             line-height: normal;
             letter-spacing: normal;
             color: $primary;
+            margin-bottom: 16px !important;
+        }
+        @media(max-width:$breakpoint-mobile){
+            font-size: 30px;
         }
         p.contact__subtitle{
             font-family: BrandonGrotesque;
@@ -60,11 +94,18 @@
                     height:48px;
                     width: 45%;
                     border-radius: 8px;
-                    background-color:$secondary;
+                    background-color:$form-background-color;
                     border: none;
                     outline: none;
                     padding-left:10px;
-                    opacity: 0.1;
+                    font-family: BrandonGrotesque;
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: $on-surface;
                 }
             }
             .second__wrapper{
@@ -74,8 +115,17 @@
                     height: 174px;
                     width: 100%;
                     border-radius: 8px;
-                    background-color:$secondary;
-                    opacity: 0.1;
+                    background-color:$form-background-color;
+                    border: none;
+                    outline:none;
+                    font-family: BrandonGrotesque;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: $on-surface;
                 }
             }
             .submit_btn{

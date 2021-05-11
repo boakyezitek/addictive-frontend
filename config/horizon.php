@@ -183,6 +183,13 @@ return [
                 'balanceCooldown' => 3,
             ],
         ],
+        'development' => [
+            'supervisor-1' => [],
+        ],
+
+        'staging' => [
+            'supervisor-1' => [],
+        ],
 
         'local' => [
             'supervisor-1' => [

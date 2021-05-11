@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\DateTime;
@@ -124,6 +125,8 @@ class AudioBook extends ResourceForUser
             Text::make(__('ISBN'), 'isbn')
                 ->sortable()
                 ->rules('max:13', 'min:13', 'nullable'),
+            Boolean::make(__('Is visible'), 'is_visible')
+                ->default(1),
             Text::make(__('Title'), 'name')
                 ->sortable()
                 ->rules('required', 'max:255'),

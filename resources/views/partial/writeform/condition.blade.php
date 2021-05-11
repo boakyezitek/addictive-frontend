@@ -1,4 +1,4 @@
-<div class="condition__wrapper">
+<div class="condition__wrapper" id="condition__wrapper">
     <p class="condition__title">Conditions de présentation</p>
     <p class="condition__subtitle">Attention, pour être sûr que votre manuscrit nous parvienne et que nous puissions le traiter dans les meilleurs délais, il vous faudra respecter les conditions suivantes :</p>
     <div class="condition__list">
@@ -51,6 +51,11 @@
                 <p class="list__subtitle">Ne joignez aucune illustration (couverture ou dans l'ouvrage, cartes du monde, etc.) à vos travaux.</p>
             </div>
         </div>
+        <div class="mobile__condition__footer">
+            <span>
+            Si vous n'arrivez pas à nous envoyer votre manuscrit via le formulaire ci-dessous, n 'hésitez pas à nous contacter.
+            </span>
+        </div>
     </div>
-    <button id="myButton" class="float-left submit-button" >Accéder au formulaire</button>
+    <button id="access__form__btn v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="float-left submit-button" >Accéder au formulaire</button>
 </div>

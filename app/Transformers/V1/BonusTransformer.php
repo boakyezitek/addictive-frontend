@@ -20,6 +20,13 @@ class BonusTransformer extends TransformerAbstract implements HomeTransformable
      */
     public function transform(Bonus $bonus)
     {
+        if ($bonus->getMedia('bonus/videos')->count() >= 1) {
+            $type = 'bonus_video';
+        } elseif ($bonus->getMedia('bonus/audios')->count() >= 1) {
+            $type = 'bonus_audio';
+        } else {
+            $type = 'bonus_list';
+        }
         return [
             'id' => (int) $bonus->id,
             'title' => $bonus->name,
@@ -30,7 +37,7 @@ class BonusTransformer extends TransformerAbstract implements HomeTransformable
             'cover' => $bonus->getMedia('bonus/covers')->count() >= 1 ? $bonus->getMediasTransformation()['covers'] : null,
             'uri' => [
                 'id' => $bonus->id,
-                'type' => 'bonus',
+                'type' => $type,
                 'url' => route('bonuses.show', ['bonus' => $bonus->id]),
             ],
             'have_audio' => $bonus->getMedia('bonus/audios')->count() >= 1 ? true : false,
@@ -78,6 +85,13 @@ class BonusTransformer extends TransformerAbstract implements HomeTransformable
      */
     public static function homeTransform(Model $model) : array
     {
+        if ($model->getMedia('bonus/videos')->count() >= 1) {
+            $type = 'bonus_video';
+        } elseif ($model->getMedia('bonus/audios')->count() >= 1) {
+            $type = 'bonus_audio';
+        } else {
+            $type = 'bonus_list';
+        }
         return [
             'id' => (int) $model->id,
             'title' => $model->name,
@@ -86,7 +100,7 @@ class BonusTransformer extends TransformerAbstract implements HomeTransformable
             'cover' => $model->getMedia('bonus/covers')->count() >= 1 ? $model->getMediasTransformation()['covers'] : null,
             'uri' => [
                 'id' => $model->id,
-                'type' => 'bonus',
+                'type' => $type,
                 'url' => route('bonuses.show', ['bonus' => $model->id]),
             ],
             'have_audio' => $model->getMedia('bonus/audios')->count() >= 1 ? true : false,

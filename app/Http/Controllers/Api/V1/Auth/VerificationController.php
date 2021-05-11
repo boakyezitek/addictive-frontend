@@ -58,6 +58,7 @@ class VerificationController extends Controller
         }
         if ($user->markEmailAsVerified()) {
             event(new Verified($user));
+            $user->sendRegisterNotification();
         }
         return $request->wantsJson()
                     ? new JsonResponse([], 204)

@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\Api\V1\BookController;
 use App\Http\Controllers\Api\V1\HomeController;
 use App\Http\Controllers\Api\V1\SyncController;
 use App\Http\Controllers\Api\V1\UserController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\Api\V1\ChapterController;
 use App\Http\Controllers\Api\V1\BookmarkController;
 use App\Http\Controllers\Api\V1\AudioBookController;
 use App\Http\Controllers\Api\V1\Auth\AuthController;
+use App\Http\Controllers\Api\V1\EdisourceController;
 use App\Http\Controllers\Api\V1\ParameterController;
 use App\Http\Controllers\Api\V1\RevenueCatController;
 use App\Http\Controllers\Api\V1\InstallationController;
@@ -33,10 +35,28 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verificationapi.verify');
     Route::middleware(['revenue_cat'])->group(function () {
         Route::prefix('revenue_cat')->group(function () {
-            Route::post('webhook', [RevenueCatController::class, 'webhook'])->name('webhook');
+            Route::post('webhook', [RevenueCatController::class, 'webhook'])->name('revenue_cat.webhook');
+        });
+    });
+    Route::middleware(['edisource'])->group(function () {
+        Route::prefix('edisource')->group(function () {
+            Route::post('webhook', [EdisourceController::class, 'webhook'])->name('edisource.webhook');
+        });
+    });
+
+    // Route for website
+    Route::middleware(['addictives'])->prefix('web')->group(function () {
+        Route::prefix('books')->name('books.')->group(function () {
+            Route::get('/all', [BookController::class, 'index'])->name('index');
+            Route::get('/{book}', [BookController::class, 'show'])->name('show');
         });
 
+        Route::prefix('authors')->name('authors.')->group(function() {
+            Route::get('/all', [AuthorController::class, 'all'])->name('all');
+            Route::get('/{author}', [AuthorController::class, 'index'])->name('show');
+        });
     });
+
     // api routes with installation header
     Route::group(['middleware' => 'installation'], function () {
         Route::prefix('auth')->group(function () {
@@ -66,6 +86,10 @@ Route::group(['prefix' => 'v1'], function () {
             });
         });
 
+        Route::prefix('parameters')->name('parameters.')->group(function() {
+            Route::get('/all', [ParameterController::class, 'index'])->name('index');
+        });
+
         Route::middleware(['auth:api', 'verified'])->group(function () {
             Route::prefix('me')->group(function () {
                 Route::get('/offerings', [RevenueCatController::class, 'index'])->name('offerings');
@@ -90,9 +114,6 @@ Route::group(['prefix' => 'v1'], function () {
                 Route::post('/{chapter}', [BookmarkController::class, 'store'])->name('store');
             });
 
-            Route::prefix('parameters')->name('parameters.')->group(function() {
-                Route::get('/all', [ParameterController::class, 'index'])->name('index');
-            });
 
             Route::prefix('home')->name('home.')->group(function() {
                 Route::get('/', [HomeController::class, 'index'])->name('home');

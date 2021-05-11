@@ -83,7 +83,7 @@ class HomeSection extends ResourceForUser
             Select::make(__('Template'), 'template')
                 ->options($options)
                 ->required()->resolveUsing(function ($template) {
-                    return __($template);
+                    return $template;
                 }),
         ];
 

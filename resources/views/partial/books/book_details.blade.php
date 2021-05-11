@@ -3,7 +3,7 @@
     <div class="details__content__box">
        @include('components.books.book_details.info')
 
-        <div class="page__line"></div>
+        <div class="page__line__bold"></div>
 
         <div class="format_box">
            <h5 class="small__heading">
