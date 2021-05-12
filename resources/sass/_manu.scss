@@ -1,19 +1,62 @@
 .manu__wrapper{
-    max-width: 68%;
+    @media(max-width:426px){
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    width: 69%;
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
     gap:0.5em;
+    .back__area{
+        display:none;
+        @media(max-width:$breakpoint-mobile){
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;
+           flex-wrap: wrap;
+           gap:1em;
+           span{
+            font-family: BrandonGrotesque;
+            font-size: 18px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: $on-surface;
+           }
+        }
 
-    p.manu__title{
-        font-family:$font-stack-bold;
-        font-size: 30px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 43px;
-        letter-spacing: normal;
-        color: $primary;
+    }
+    .title__area{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        span.manu__title{
+            font-family: $font-stack-bold;
+            font-size: 30px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 43px;
+            letter-spacing: normal;
+            color: $primary;
+        }
+        .progress__btn{
+            display: none;
+            @media(max-width:$breakpoint-mobile){
+                display: block;
+                background-color: $background-pink;
+                color: $primary;
+                width: 44px;
+                height: 32px;
+                padding: 4px 12px 5px;
+                border-radius: 20px;
+            }
+        }
     }
     span{
         font-size: 18px;
@@ -25,6 +68,8 @@
         color: $on-background;
     }
     p.manu__context{
+        margin: 4px 12px;
+        font-family: BrandonGrotesque;
         font-size: 16px;
         font-weight: normal;
         font-stretch: normal;
@@ -34,27 +79,72 @@
         color: $on-background;
     }
     input{
+        font-family: BrandonGrotesque;
         height: 48px;
         margin: 20px 0;
         padding: 12px 12px 12px 16px;
-        opacity: 0.1;
         border-radius: 8px;
-        background-color: $secondary;
+        background-color: $form-background-color;
+        color:$on-surface;
+        border: none;
+        outline: none;
+        @media(max-width:$breakpoint-mobile){
+            width: 100%;
+        }
+    }
+    p.manu__txt{
+        @media(max-width:$breakpoint-mobile){
+            width: 100%;
+        }
     }
     textarea{
+        font-family: BrandonGrotesque;
         height: 142px;
         margin: 20px 0 0;
-        padding: 12px 12px 59px 16px;
-        opacity: 0.1;
+        padding: 12px;
         border-radius: 8px;
-        background-color: $secondary;
+        background-color: $form-background-color;
+        color:$on-surface;
+        border: none;
+        outline:none;
+        @media(max-width:$breakpoint-mobile){
+            width: 100%;
+        }
+    }
+    textarea::-webkit-input-placeholder {
+        /* design first line here */
+        font-size: 1em;
+    }
+
+    textarea::-webkit-input-placeholder::after {
+        /* design second line here */
+        display:block;
+        content:"Please note that we do not work...";
+        font-style:italic;
+        font-size: .6em;
+        margin-top: 20px;
     }
     .btn__area{
+        @media(max-width:$breakpoint-mobile){
+            width: 100%;
+        }
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 50px 0;
-        button{
+        .submit-button1{
+            @media(max-width:$breakpoint-mobile){
+                margin: 0;
+            }
+            width: 99px;
+            height: 48px;
+            // margin: 40px 300px 0 1px;
+            padding: 11px 20px;
+            border-radius: 8px;
+            border: 1px solid $secondary;
+            font-weight: bold;
+        }
+        .submit-button2{
             width: 198px;
             height: 50px;
             padding: 12px 20px;
@@ -63,12 +153,124 @@
             align-self: flex-end;
             border:none;
             outline: none;
-            color:$surface
+            color:$surface;
+            font-weight: bold;
         }
     }
     .msg__context{
         display: flex;
         justify-content: flex-start;
     }
+    div{
+        .checkbox__btn{
+            width: 52px;
+            height: 32px;
+            margin: 20px 16px 0 0;
+            padding: 2px 12px 4px;
+            border-radius: 20px;
+            border: 1px solid $secondary-variant;
+            font-family: BrandonGrotesque;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 27px;
+            letter-spacing: normal;
+            text-align: center;
+            color: $on-background;
+            display: inline-block;
+        }
+    }
 
+
+    .spot__area{
+        display: none;
+        @media(max-width:$breakpoint-mobile){
+            display: block;
+            height: 40px;
+            text-align:center;
+            border: 1px solid $secondary;
+            border-style: dotted;
+            border-radius: 8px;
+             padding: 7px 43.3px 7px 43px;
+             margin: 20px 0 40px 0;
+            span{
+                font-family: BrandonGrotesque;
+                font-size: 18px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: $on-background;
+            }
+        }
+    }
+
+    #myModal{
+        .modal-dialog{
+            position: fixed;
+            top: 50% !important;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .modal-content{
+                @media(max-width:$breakpoint-mobile){
+                    width: 100%;
+                }
+                width: 370px;
+                height: 448px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.25em;
+                .modal__header__title{
+                    font-family: BrandonGrotesque;
+                    font-size: 22px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: $on-background;
+                }
+                .sub__container{
+                    padding: 0 1rem;
+                    text-align: center;
+                    .modal__header__subtitle{
+                        font-family: BrandonGrotesque;
+                        font-size: 18px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 28px;
+                        letter-spacing: normal;
+                        text-align: center;
+                        color: #141415;
+                    }
+
+                }
+
+                .modal__btn{
+                    width: 306px;
+                    height: 48px;
+                    background: #f66757;
+                    font-family: BrandonGrotesque;
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
 }

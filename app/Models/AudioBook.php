@@ -42,11 +42,13 @@ class AudioBook extends Model implements HasMedia, Transformable
     public const RESIZED_HEIGHT = 300;
 
     protected $fillable = [
-        'name', 'description', 'publication_date', 'view_count',
+
+        'name', 'description', 'publication_date', 'view_count', 'web_duration', 'release_date', 'is_visible',
     ];
 
     protected $casts = [
-        'publication_date' => 'datetime'
+        'publication_date' => 'datetime',
+        'release_date' => 'datetime',
     ];
 
     public function chapters()
@@ -76,7 +78,7 @@ class AudioBook extends Model implements HasMedia, Transformable
 
     public function users()
     {
-        return $this->belongsToMany(User::class, 'user_items');
+        return $this->belongsToMany(User::class, 'user_items')->withPivot('archived_at', 'status')->withTimestamps();
     }
 
     public function categories()
@@ -97,6 +99,14 @@ class AudioBook extends Model implements HasMedia, Transformable
     public function credits()
     {
         return $this->morphMany(Credit::class, 'used');
+    }
+
+    /**
+     * Get the book that owns the AudioBook
+     */
+    public function book()
+    {
+        return $this->hasOne(Book::class);
     }
 
     /**
@@ -297,7 +307,12 @@ class AudioBook extends Model implements HasMedia, Transformable
      */
     public function getProgress(User $user)
     {
-        if($user->chapters()->where('audio_book_id', $this->id)->count() >= 1){
+        $item = $this->users()->where('user_id', $user->id)->first()->pivot;
+        if ($item->status == self::STATUS_UNREAD) {
+            $progression = 0;
+        } elseif ($item->status == self::STATUS_FINISHED) {
+            $progression = $this->getDuration();
+        } elseif ($user->chapters()->where('audio_book_id', $this->id)->count() >= 1){
             $last_chapter = $user->chapters()->where('audio_book_id', $this->id)->orderBy('chapter_user.updated_at', 'desc')->first();
 
             $progression = $last_chapter->pivot->time_elapsed;
@@ -325,6 +340,38 @@ class AudioBook extends Model implements HasMedia, Transformable
     {
         $duration = $this->getDuration();
         $progression = $this->getProgress($user);
+        if($duration == 0) {
+            return null;
+        } else {
+            $carbon = Carbon::createFromTimestampMs($duration);
+            if($carbon->hour >= 1){
+                if($carbon->minute >= 1){
+                    return $carbon->hour.' h '.$carbon->minute.' min';
+                } else {
+                    return $carbon->hour.' h';
+                }
+            } else{
+                if($carbon->minute >= 1){
+                    return $carbon->minute.' min';
+                } else {
+                    return '1 min';
+                }
+            }
+        }
+
+    }
+
+    /**
+     *
+     * Get label for total duration
+     *
+     * @param App/Models/User $user
+     *
+     * @return string Label for the remaining time.
+     */
+    public function getDurationLabel()
+    {
+        $duration = $this->getDuration();
         if($duration == 0) {
             return null;
         } else {

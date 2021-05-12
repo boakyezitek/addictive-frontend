@@ -54,7 +54,7 @@ class User extends Authenticatable implements Transformable, HasMedia, MustVerif
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password', 'terms_accepted_at', 'push_settings', 'email_verified_at', 'is_listening', 'display_rating_when', 'email_verification_sent_at', 'accepted_free_subscription', 'intro_subscription_used',
+        'username', 'email', 'password', 'terms_accepted_at', 'push_settings', 'email_verified_at', 'is_listening', 'display_rating_when', 'email_verification_sent_at', 'accepted_free_subscription', 'intro_subscription_used', 'interacted_free_subscription',
     ];
 
     /**
@@ -292,6 +292,16 @@ class User extends Authenticatable implements Transformable, HasMedia, MustVerif
     public function isSubscribed()
     {
         return $this->subscriptions()->whereNull('cancelled_at')->where('expiration_at', '>', Carbon::now())->where('status', Subscription::STATUS_IN_PROGRESS)->first() ? true : false;
+    }
+
+        /**
+     * Return the active subscription
+     *
+     * @return App/Models/Subscription
+     */
+    public function activeSubscription()
+    {
+        return $this->subscriptions()->whereNull('cancelled_at')->where('expiration_at', '>', Carbon::now())->where('status', Subscription::STATUS_IN_PROGRESS)->first();
     }
 
     public function installations()

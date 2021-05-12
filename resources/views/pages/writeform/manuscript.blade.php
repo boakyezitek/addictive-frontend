@@ -1,6 +1,11 @@
-@include('layouts.app')
+@extends('layouts.app')
 
-<div class="write__form__container">
-    @include("partial.writeform.sidebar")
-    @include("partial.writeform.manuscript")
-</div>
+
+@section("content")
+<section>
+  <div class="write__form__container">
+  @include("partial.writeform.sidebar")
+      @include("partial.writeform.manuscript")
+  </div>
+</section>
+@endsection

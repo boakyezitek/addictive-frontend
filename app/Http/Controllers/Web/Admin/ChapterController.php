@@ -7,9 +7,10 @@ use App\Models\Chapter;
 use App\Models\AudioBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use App\Events\AudioChapterAdded;
+use App\Events\AddMultipleChapters;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ChapterController extends Controller
 {
@@ -20,43 +21,17 @@ class ChapterController extends Controller
 
     public function upload(Request $request)
     {
-    	$zip = new ZipArchive;
     	$audiobook = AudioBook::find($request->audiobook_id);
 
-    	$last_chapter = $audiobook->chapters->count() > 0 ? $audiobook->unorderedChapters()->orderBy('order', 'desc')->first() : null;
-    	$folder_name = substr($request->file->getClientOriginalName(), 0, -4);
-    	if ($zip->open($request->file->path())) {
-    		$indexes = [];
-    		for($i = 1; $i < $zip->numFiles; $i++) {
-                if(substr($zip->getNameIndex($i), -3) == "mp3") {
-        			array_push($indexes, $zip->getNameIndex($i));
-    		        sort($indexes, SORT_REGULAR);
-                }
-    		}
-    		$order = $last_chapter ? $last_chapter->order + 1 : 1;
-    		foreach ($indexes as $index) {
-    			$fp = $zip->getStream($index);
-    			$explode = explode("/", $index);
-    			$name = substr($explode[1], 0, -4);
-    			$chapter = new Chapter([
-    				'name' => 'Chapitre '.$order,
-    				'order' => $order,
-    			]);
+        $disk = Storage::disk('gcs');
 
-    			$audiobook->chapters()->save($chapter);
+        $filename = uniqid().'_'.Carbon::now()->format('Y-m-d') .'_'. $request->file->getClientOriginalName();
 
-    			$contents = stream_get_contents($fp);
-    			
-    			$chapter->addMediaFromBase64(base64_encode($contents))->usingFileName(Carbon::now()."-".$name.'.mp3')->toMediaCollection('chapters/audio');
+        $disk->putFileAs('ZipArchives/', $request->file, $filename, 'public');
 
-    			fclose($fp);
-
-                AudioChapterAdded::dispatch($chapter);
-
-    			$order += 1;
-    		}
-    	}
-    	$zip->close();
+        if ($disk->exists('ZipArchives/'.$filename)) {
+    	   AddMultipleChapters::dispatch($audiobook, $filename, $request->file->getClientOriginalName());
+        }
 
     	return redirect('/admin/resources/audio-books/'. $audiobook->id);
     }

@@ -13,7 +13,7 @@ class Category extends Model implements Transformable
 {
     use HasFactory, Eventable;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['name'];
 
     public static function transformer() : TransformerAbstract
     {
@@ -23,5 +23,10 @@ class Category extends Model implements Transformable
     public function audioBooks()
     {
         return $this->belongsToMany(AudioBook::class);
+    }
+
+    public function books()
+    {
+        return $this->belongsToMany(Book::class);
     }
 }

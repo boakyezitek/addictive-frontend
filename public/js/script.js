@@ -71,12 +71,9 @@ $(".search__drop__down__box").on('mouseover', function(){
 $("#searchBar").on('mouseout', function(){
   $(".search__drop__down__box").css("display", "none").fadeOut(2000);
 });
-
-
-
-
-// $("#myButton").on('click',  function () {
+// $("#access__form__btn").on('click',  function () {
 //   location.href = "/manuscript";
+
 // });
 // $(".right__main__content__btn").on('click',  function () {
 //   location.href = "/condition";
@@ -112,3 +109,38 @@ $('.mobile').on('click', function(){
 $('.close__button').on('click', function(){
     $('.col-md-2').hide();
 })
+
+  $(".sidebar__content ul li a").on('click',function(e) {
+      $('.sidebar__content ul li.active').removeClass('active');
+      var $parent = $(this).parent();
+      $parent.addClass('active');
+      e.preventDefault();
+  });
+
+
+        // display a modal (small modal)
+        // $(document).on('click', '#myButton2', function(event) {
+        //     event.preventDefault();
+        //     let href = $(this).attr('data-attr');
+        //     $.ajax({
+        //         url: href,
+        //         beforeSend: function() {
+        //             $('#loader').show();
+        //         },
+        //         // return the result
+        //         success: function(result) {
+        //             $('#smallModal').modal("show");
+        //             $('#smallBody').html(result).show();
+        //         },
+        //         complete: function() {
+        //             $('#loader').hide();
+        //         },
+        //         error: function(jqXHR, testStatus, error) {
+        //             console.log(error);
+        //             alert("Page " + href + " cannot open. Error:" + error);
+        //             $('#loader').hide();
+        //         },
+        //         timeout: 8000
+        //     })
+        // });
+

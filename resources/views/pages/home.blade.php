@@ -5,8 +5,12 @@
 @if (count($categories) > 0)
 @foreach ($categories as $category)
 @if (count($category) > 0)
+@if ($loop->index == 2)
+@include('components.banner')
+@endif
 @include('partial.book', ['books' => $category])
 @endif
+
 @endforeach
 @endif
 @include('partial.newsletter')

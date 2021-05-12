@@ -87,22 +87,22 @@ class CollectionTemplate extends Template
             case 'App\Models\AudioBook': 
                 switch ($scope) {
                     case 'news':
-                        $query = $query->filters($scope, 'publication_date', 'desc', null);
+                        $query = $query->where('is_visible', 1)->filters($scope, 'publication_date', 'desc', null);
                         break;
                     case 'olds':
-                        $query = $query->filters($scope, 'publication_date', 'ASC', null);
+                        $query = $query->where('is_visible', 1)->filters($scope, 'publication_date', 'ASC', null);
                         break;
                     case 'most_searched':
                         // TODO: order by visits count
-                        $query = $query->filters($scope, '', 'desc', null);
+                        $query = $query->where('is_visible', 1)->filters($scope, '', 'desc', null);
                         break;
                     case 'unpublished':
-                        $query = $query->filters($scope, 'publication_date', 'asc', null);
+                        $query = $query->where('is_visible', 1)->filters($scope, 'publication_date', 'asc', null);
                         break;
                 }
                 break; 
         }
 
-        return $query;
+        return $query->where('is_visible', 1);
     }
 }

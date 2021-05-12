@@ -61,4 +61,12 @@ return [
       'client_secret' => env('APPLE_CLIENT_SECRET'),
       'redirect' => env('APP_URL') . 'oauth/apple/callback',
     ],
+
+    'edisource' => [
+        'header' => env('EDISOURCE_HEADER'),
+    ],
+
+    'addictives' => [
+        'header' => env('ADDICTIVES_HEADER'),
+    ]
 ];

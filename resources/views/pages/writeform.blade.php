@@ -8,13 +8,13 @@
 
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 sidebar">
             @include("partial.writeform.sidebar")
         </div>
         <div class="col-md-8">
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                @include("partial.writeform.content")
+                @include("partial.writeform.index")
             </div>
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 @include("partial.writeform.condition")

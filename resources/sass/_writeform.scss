@@ -22,12 +22,28 @@
 
     }
     .write__form__content{
+        width: 69%;
+        @media(max-width:426px){
+            width: 100%;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
         .right__main__content{
             display: flex;
             flex-wrap:wrap;
             flex-direction: column;
             justify-content:space-between;
             gap:1.5em;
+            .first_title{
+                @media(min-width:426px){
+                    display: none;
+                }
+            }
+            .page__line{
+                @media(min-width:426px){
+                    display: none;
+                }
+            }
             .right__main__content__title{
                 p{
 
@@ -42,7 +58,10 @@
             }
             .right__main__content__context{
                 .context{
-                     width: 672px;
+                     width: 100%;
+                     @media(max-width: $breakpoint-mobile){
+                         width :100%;
+                     }
                 }
             }
             .right__main__content__btn{
@@ -54,7 +73,6 @@
                 display: flex;
                 align-self: flex-end;
                 justify-content: center;
-                margin-right: 50px;
                 p{
 
                     font-size: 18px;
@@ -90,6 +108,9 @@
 }
 
 .writers_side__menu{
+    @media(max-width:426px){
+        display: none;
+    }
     display: flex;
     flex-direction: column;
 

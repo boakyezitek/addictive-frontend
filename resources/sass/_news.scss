@@ -1,24 +1,22 @@
 @import "_variables";
 .news_content{
     display: flex;
-    gap: 2em;
+    gap: 1em;
     align-items: center;
     flex-wrap: wrap;
+    @media (max-width: $breakpoint-mobile) {
+        justify-content: center;
 
-    .news__item{
-        display: flex;
-        gap: 1.2em;
-        align-items: center;
-        padding-left: 10px;
     }
-    @media(min-width:$breakpoint-tablet){
-        .news__item{
-            display: block;
-            gap: 1.2em;
+    .news__item{
+        @media (max-width: $breakpoint-mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
-            padding-left: 10px;
+            gap: 1em;
         }
-      }
+    }
     .new__mask{
 
         width: 121px;

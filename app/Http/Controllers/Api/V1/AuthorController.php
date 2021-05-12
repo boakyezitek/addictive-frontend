@@ -20,4 +20,33 @@ class AuthorController extends Controller
     {
         return new ModelResponse($author, false);
     }
+
+    /**
+     * Get WEB Author detail
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \App\Responsables\V1\UserResponse
+     */
+    public function index(Request $request, Author $author)
+    {
+        return new ModelResponse($author, false);
+    }
+
+    /**
+     * Get all WEB Authors
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \App\Responsables\V1\UserResponse
+     */
+    public function all(Request $request)
+    {
+        $letter = $request->has('letter') ? $request->letter : null;
+        $string = $request->has('q') ? $request->q : null;
+        $format = $request->has('format') ? $request->format : null;
+
+        $authors = Author::where('is_web', 1)->filters($letter, $string, $format)->orderBy('first_name', 'asc');
+        return new ModelResponse($authors, true, 30);
+    }
 }

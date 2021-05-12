@@ -38,7 +38,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
-            'throttle:60,1',
+            'throttle:120,1',
             'bindings',
         ],
     ];
@@ -63,6 +63,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'installation' => \App\Http\Middleware\CheckInstallation::class,
         'revenue_cat' => \App\Http\Middleware\CheckRevenueCat::class,
+        'edisource' => \App\Http\Middleware\CheckEdisource::class,
+        'addictives' => \App\Http\Middleware\CheckAddictives::class
     ];
 
     /**

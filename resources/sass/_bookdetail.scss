@@ -1,6 +1,10 @@
 @import "_variables";
 
 .book__details__main__box {
+    @media(max-width:$breakpoint-mobile){
+        max-width: 100%;
+        padding: 16px;
+    }
     max-width: 80%;
     margin: auto;
     padding: 20px;
@@ -11,12 +15,19 @@
         flex-wrap: wrap;
 
         .mask__box {
+            @media(max-width:$breakpoint-mobile){
+                margin-left:auto;
+                margin-right:auto;
+            }
             max-width: 370px;
             img{
                 object-fit: fill;
             }
 
             .social__box{
+                @media(max-width:$breakpoint-mobile){
+                    display: none;
+                }
                 display: flex;
                 justify-content:space-between;
                 gap: 1em;
@@ -51,8 +62,19 @@
 
         .details__content__box {
             flex: 1;
-
+            .page__line__bold{
+                @media(max-width:$breakpoint-mobile){
+                    height: 11px;
+                    background: #e2e0e6;
+                    margin: 50px 0;
+                    width: 100%;
+                }
+            }
             .large__page__title{
+                @media(max-width:$breakpoint-mobile){
+                    font-size: 30px;
+                    font-family: BrandonGrotesque;
+                }
                 font-family: $font-stack-bold;
                 font-size: 34px;
                 font-weight: bold;
@@ -96,6 +118,11 @@
   letter-spacing: normal;
   color: $on-background;
 }
+#pills-tab{
+    gap: 16px;
+    justify-content: center;
+}
+
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
@@ -135,6 +162,9 @@
     }
 
     .dropdown__list{
+        @media(max-width:$breakpoint-mobile){
+            width: 100%;
+        }
         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07);
         width: 386px;
        position:absolute;
@@ -196,21 +226,19 @@
     gap: 0.5em;
 
     .tags{
-       min-width: 81px;
-  height: 32px;
-  margin: 0 12px 0 0;
-  padding: 4px 12px 5px;
-  border-radius: 20px;
-  background-color: $background-pink;
-
-  font-size: 16px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color:$primary;
+        width: 81px;
+        height: 32px;
+        margin: 0 12px 0 0;
+        border-radius: 20px;
+        background-color: $background-pink;
+        font-size: 16px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 31px;
+        letter-spacing: normal;
+        text-align: center;
+        color:$primary;
     }
 }
 

@@ -1,7 +1,8 @@
 // Body
 $body-bg: #f8fafc;
-@import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+// @import url('http://fonts.cdnfonts.com/css/brandon-grotesque-regular');
+// @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url(https://use.typekit.net/pbs7jdv.css);
 // Typography
 $font-family-sans-serif: 'Brandon Grotesque Light', sans-serif;
 $font-stack-regular:'Brandon Grotesque Light', sans-serif;
@@ -49,9 +50,14 @@ $breakpoint-small-mobile-360: 360px;
 $breakpoint-small-mobile2: 375px;
 $breakpoint-mobile: 411px;
 $breakpoint-tablet:768px;
+<<<<<<< HEAD
 $breakpoint-1024:1024px;
 $breakpoint-1280:1280px;
 $breakpoint-1366:1366px;
 $breakpoint-1440:1440px;
 $breakpoint-1680:1680px;
 $breakpoint-large-desktop: 1920px;
+=======
+$breakpoint-small-desktop: 1440px;
+$breakpoint-large-desktop: 1920px;
+>>>>>>> 73776f7fd31085b8f08220236ac49d26cc76ea5e

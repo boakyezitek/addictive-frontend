@@ -4,10 +4,12 @@ namespace App\Providers;
 
 use App\Models\Subscription;
 use App\Events\AudioChapterAdded;
+use App\Events\AddMultipleChapters;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use App\Observers\SubscriptionObserver;
 use App\Listeners\Chapters\UpdateDuration;
+use App\Listeners\Chapters\MultipleChaptersAdded;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
@@ -25,6 +27,10 @@ class EventServiceProvider extends ServiceProvider
 
         AudioChapterAdded::class => [
             UpdateDuration::class,
+        ],
+
+        AddMultipleChapters::class => [
+            MultipleChaptersAdded::class,
         ],
 
         \SocialiteProviders\Manager\SocialiteWasCalled::class => [

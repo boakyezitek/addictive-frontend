@@ -6,6 +6,7 @@
    <div class="letter">E</div>
    <div class="letter">F</div>
    <div class="letter">G</div>
+   <div class="letter">H</div>
    <div class="letter">I</div>
    <div class="letter">J</div>
    <div class="letter">K</div>

@@ -50,6 +50,7 @@ class RevenueCatController extends Controller
                 'purchased_at' => Carbon::createFromTimestampMs($request->event['purchased_at_ms']),
                 'expiration_at' => Carbon::createFromTimestampMs($request->event['expiration_at_ms']),
                 'status' => Subscription::STATUS_IN_PROGRESS,
+                'platform' => $request->event['store'] == 'PLAY_STORE' ? 'android' : 'ios',
             ]);
             $subscription->save();
             return response()->json(['message' => 'success'], 200);
@@ -64,6 +65,8 @@ class RevenueCatController extends Controller
                 $subscription->renewed_count += 1;
                 $subscription->period_type = $request->event['period_type'];
                 $subscription->price = $request->event['price_in_purchased_currency'];
+                $subscription->platform = $request->event['store'] == 'PLAY_STORE' ? 'android' : 'ios';
+                $subscription->product_id = $request->event['product_id'];
                 $subscription->save();
                 if ($old_price != 0) {
                     $subscription->createCredits();
@@ -81,6 +84,7 @@ class RevenueCatController extends Controller
                     'purchased_at' => Carbon::createFromTimestampMs($request->event['purchased_at_ms']),
                     'expiration_at' => Carbon::createFromTimestampMs($request->event['expiration_at_ms']),
                     'status' => Subscription::STATUS_IN_PROGRESS,
+                    'platform' => $request->event['store'] == 'PLAY_STORE' ? 'android' : 'ios',
                 ]);
                 $subscription->save();
                 return response()->json(['message' => 'success'], 200);

@@ -69,7 +69,7 @@ class Author extends ResourceForUser
                 ->setFileName(function($originalFilename, $extension, $model){
                     return md5($originalFilename) . '.' . $extension;
                 }
-            )->rules('required'),
+            ),
             Text::make(__('FirstName'), 'first_name')
                 ->sortable()
                 ->rules('required', 'max:255'),

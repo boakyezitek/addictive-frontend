@@ -25,9 +25,9 @@ class HomeController extends Controller
         $user->home_count += 1;
         if($user->isSubscribed() == false) {
             if($user->audioBooks()->where('status', AudioBook::STATUS_IN_PROGRESS)->whereNull('archived_at')->count() >= 1) {
-                if($user->home_count % $user->display_rating_when == 0 && ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0)) {
+                if($user->home_count % $user->display_rating_when == 0 && ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0 || $user->interacted_free_subscription == 0)) {
                     $homeSections = HomeSection::orderBy('order', 'asc');
-                } elseif ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0) {
+                } elseif ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0 || $user->interacted_free_subscription == 0) {
                     $homeSections = HomeSection::where('is_rating', '!=', 1)->orderBy('order', 'asc');
                 } elseif ($user->home_count % $user->display_rating_when == 0) {
                     $homeSections = HomeSection::where('is_free_subscription', '!=', 1)->orderBy('order', 'asc');
@@ -35,9 +35,9 @@ class HomeController extends Controller
                     $homeSections = HomeSection::where('is_free_subscription', '!=', 1)->where('is_rating', '!=', 1)->orderBy('order', 'asc');
                 }
             } else {
-                if ($user->home_count % $user->display_rating_when == 0 && ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0)) {
+                if ($user->home_count % $user->display_rating_when == 0 && ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0 || $user->interacted_free_subscription == 0)) {
                     $homeSections = HomeSection::where('template', '!=', 'currently_played')->orderBy('order', 'asc');
-                } elseif ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0) {
+                } elseif ($user->accepted_free_subscription == 0 && $user->home_count % $user->display_free_subscription_when == 0 || $user->interacted_free_subscription == 0) {
                     $homeSections = HomeSection::where('is_rating', '!=', 1)->where('template', '!=', 'currently_played')->orderBy('order', 'asc');
                 } elseif ($user->home_count % $user->display_rating_when == 0) {
                     $homeSections = HomeSection::where('is_free_subscription', '!=', 1)->where('template', '!=', 'currently_played')->orderBy('order', 'asc');

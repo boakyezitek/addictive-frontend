@@ -47,6 +47,11 @@
         }
     }
     .catalog__search__input{
+      @media (max-width:$breakpoint-mobile) {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
         background: #f3f3f4;
         height: 48px;
         display: flex;
@@ -70,14 +75,24 @@
 
     .news_content{
         margin-top: -50px;
+        @media (min-width:$breakpoint-small-mobile-360){
+          margin-top:initial;
+        }
         @media (min-width: $breakpoint-tablet) {
              margin-top: initial;
         }
         .news__item{
             padding-left: 0px;
             @media (min-width: $breakpoint-tablet) {
-             padding-left: 15px;
+              padding-left: 15px;
             }
+            @media (max-width: $breakpoint-mobile) {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+              align-items: center;
+          }
         }
     }
 

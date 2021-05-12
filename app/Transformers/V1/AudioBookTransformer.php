@@ -17,6 +17,12 @@ use App\Transformers\V1\AudioBookTransformer;
 
 class AudioBookTransformer extends TransformerAbstract implements HomeTransformable
 {
+    protected $route;
+
+    public function __construct($route = false)
+    {
+        $this->route = $route;
+    }
     /**
      * List of resources to include
      *
@@ -37,14 +43,29 @@ class AudioBookTransformer extends TransformerAbstract implements HomeTransforma
      */
     public function transform(AudioBook $audioBook)
     {
+        if ($this->route) {
+            return [
+                'id' => (int) $audioBook->id,
+                'duration' => $audioBook->web_duration,
+                'release_date' => $audioBook->release_date,
+                'reference' => $audioBook->internal_code,
+            ];
+        }
+
         $user = Auth::user();
-        if($audioBook->users->contains($user)){
-            if($audioBook->getDuration() == 0) {
-                $progress = null;
-            } else {
+        if($audioBook->getDuration() == 0) {
+            $progress = null;
+        } else {
+            if ($audioBook->users->contains($user)) {
                 $progress = array( 
                     'label' => $audioBook->getRemainingTimeLabel($user),
                     'step' => $audioBook->getProgress($user),
+                    'duration' =>  $audioBook->getDuration(),
+                );
+            } else {
+                $progress = array(
+                    'label' => $audioBook->getDurationLabel($user),
+                    'step' => 0,
                     'duration' =>  $audioBook->getDuration(),
                 );
             }

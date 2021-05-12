@@ -24,13 +24,12 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
+        "slick-carousel": "^1.8.1",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "animate.css": "^4.1.1",
         "bootstrap-datepicker": "^1.9.0",
-        "select2": "^4.0.7",
-        "slick-carousel": "^1.8.1"
+        "select2": "^4.0.7"
     }
 }
