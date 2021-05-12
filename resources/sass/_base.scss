@@ -513,7 +513,7 @@ body{
  @media(min-width:$breakpoint-tablet){
      display: none;
 }
-@media(min-width:$breakpoint-small-desktop){
+@media(min-width:$breakpoint-1280){
     display: block;
     width: 225px;
 }

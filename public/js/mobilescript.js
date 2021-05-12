@@ -29,10 +29,6 @@ $("#searchBar").on('mouseout', function(){
     $(".search__drop__down__box").css("display", "none").fadeOut(2000);
   });
 
-$("#nextstep__btn").on('click',  function () {
-    location.href = "/manusetting";
-});
-
 
 $(".mobile_search_icon").on("click", function() {
     $('.menu-icons').hide();

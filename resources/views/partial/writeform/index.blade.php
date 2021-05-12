@@ -17,7 +17,7 @@
                 Nous avons une préférence pour les narrations à la première personne du singulier et au présent.
             </div>
         </div>
-        <div class="right__main__content__btn" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+        <div class="right__main__content__btn start__button" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
             <p>Soumettre un manuscrit</p>
 
         </div>

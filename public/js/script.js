@@ -110,13 +110,51 @@ $('.close__button').on('click', function(){
     $('.col-md-2').hide();
 })
 
-  $(".sidebar__content ul li a").on('click',function(e) {
-      $('.sidebar__content ul li.active').removeClass('active');
-      var $parent = $(this).parent();
-      $parent.addClass('active');
-      e.preventDefault();
-  });
+//   $(".sidebar__content ul li a").on('click',function(e) {
+//       $('.sidebar__content ul li.active').removeClass('active');
+//       var $parent = $(this).parent();
+//       $parent.addClass('active');
+//       e.preventDefault();
+//   });
 
+  $('.start__button').on('click', function(){
+      $('#v-pills-1').removeClass('active');
+      $('#v-pills-2').addClass('active');
+  })
+
+  $('.condition__btn').on('click', function(){
+    $('#v-pills-2').removeClass('active');
+    $('#v-pills-3').addClass('active');
+    $('#v-pills-messages').addClass('active show');
+    $('#v-pills-profile').removeClass('active show');
+})
+
+$('.annuler__button').on('click', function(){
+    $('#v-pills-3').removeClass('active');
+    $('#v-pills-2').addClass('active');
+    $('#v-pills-messages').removeClass('active show');
+    $('#v-pills-profile').addClass('active show');
+})
+
+
+$('.etape__button').on('click', function(){
+    $('#v-pills-3').removeClass('active');
+    $('#v-pills-4').addClass('active');
+    $('#v-pills-messages').removeClass('active show');
+    $('#v-pills-settings').addClass('active show');
+})
+
+$('.annuler__button_2').on('click', function(){
+    $('#v-pills-4').removeClass('active');
+    $('#v-pills-3').addClass('active');
+    $('#v-pills-messages').addClass('active show');
+    $('#v-pills-settings').removeClass('active show');
+})
+
+$('.etape__button_2').on('click', function(){
+    $('#v-pills-1').removeClass('active');
+    $('#v-pills-4').addClass('active');
+})
 
         // display a modal (small modal)
         // $(document).on('click', '#myButton2', function(event) {

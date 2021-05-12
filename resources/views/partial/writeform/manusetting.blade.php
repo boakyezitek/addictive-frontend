@@ -1,4 +1,4 @@
-<div class="manu__wrapper">
+<div class="manu__wrapper settings_wrapper">
     <div class="back__area">
         <img src="img/icons/ic-arrow-back.png" alt="">
         <span>RETOUR</span>
@@ -74,7 +74,7 @@
         </div>
     </div>
     <div class="btn__area">
-        <button id="setting__cancel__btn  v-pills-settings-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="submit-button1">Annuler</button>
-        <button id="setting__nextstep__btn" class="submit-button2" data-toggle="modal" data-target="#myModal">Étape suivante</button>
+        <button id="setting__cancel__btn  v-pills-settings-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="submit-button1 annuler__button_2">Annuler</button>
+        <button id="setting__nextstep__btn" class="submit-button2 etape__button_2" data-toggle="modal" data-target="#myModal">Étape suivante</button>
     </div>
 </div>

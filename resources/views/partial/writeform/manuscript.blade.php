@@ -1,4 +1,4 @@
-<div class="manu__wrapper">
+<div class="manu__wrapper .settings_wrapper__1">
     <div class="back__area" >
         <img src="img/icons/ic-arrow-back.png" alt="">
         <span>RETOUR</span>
@@ -27,7 +27,7 @@
     <p class="manu__txt">Présentez-vous en quelques lignes. Qui êtes-vous ? Qu'aimez-vous ? Dites-nous aussi ce que vous avez déjà écrit, publié, si vous avez un blog, un site... : </p>
     <textarea rows="4" cols="50" name="presentation" class="presentation" placeholder="Votre pseudonyme"></textarea>
     <div class="btn__area">
-        <button id="cancel__btn  v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" class="submit-button1 nav-pills">Annuler</button>
-        <button id="nextstep__btn v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" class="submit-button2">Étape suivante</button>
+        <button id="cancel__btn" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" class="submit-button1 annuler__button">Annuler</button>
+        <button id="nextstep__btn" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" class="submit-button2 etape__button">Étape suivante</button>
     </div>
 </div>

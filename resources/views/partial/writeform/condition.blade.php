@@ -57,5 +57,5 @@
             </span>
         </div>
     </div>
-    <button id="access__form__btn v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="float-left submit-button" >Accéder au formulaire</button>
+    <button id="access__form__btn" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" class="float-left submit-button condition__btn" >Accéder au formulaire</button>
 </div>

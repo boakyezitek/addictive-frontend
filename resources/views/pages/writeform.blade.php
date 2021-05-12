@@ -4,9 +4,6 @@
 @section("content")
 <section>
   <div class="add__custom__container mt-5">
-
-
-
       <div class="row">
         <div class="col-md-4 sidebar">
             @include("partial.writeform.sidebar")
@@ -16,13 +13,13 @@
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 @include("partial.writeform.index")
             </div>
-            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpane2" aria-labelledby="v-pills-profile-tab">
                 @include("partial.writeform.condition")
             </div>
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpane3" aria-labelledby="v-pills-messages-tab">
                 @include("partial.writeform.manuscript")
             </div>
-            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpane4" aria-labelledby="v-pills-settings-tab">
                 @include("partial.writeform.manusetting")
             </div>
           </div>

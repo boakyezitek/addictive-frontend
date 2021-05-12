@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@import url(http://fonts.cdnfonts.com/css/brandon-grotesque-regular);@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);/*!
-=======
 @import url(https://use.typekit.net/pbs7jdv.css);/*!
->>>>>>> 73776f7fd31085b8f08220236ac49d26cc76ea5e
  * Datepicker for Bootstrap v1.9.0 (https://github.com/uxsolutions/bootstrap-datepicker)
  *
  * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
@@ -296,19 +292,6 @@
   flex-wrap: wrap;
 }
 
-.news_content .news__item {
-  display: flex;
-  gap: 1.2em;
-  align-items: center;
-  padding-left: 10px;
-}
-
-@media (min-width: 768px) {
-  .news_content .news__item {
-    display: block;
-    gap: 1.2em;
-    align-items: center;
-    padding-left: 10px;
 @media (max-width: 411px) {
   .news_content {
     justify-content: center;
@@ -523,14 +506,54 @@
 }
 
 .manu__wrapper {
-  max-width: 68%;
+  width: 69%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 0.5em;
 }
 
-.manu__wrapper p.manu__title {
+@media (max-width: 426px) {
+  .manu__wrapper {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.manu__wrapper .back__area {
+  display: none;
+}
+
+@media (max-width: 411px) {
+  .manu__wrapper .back__area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .manu__wrapper .back__area span {
+    font-family: BrandonGrotesque;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #898394;
+  }
+}
+
+.manu__wrapper .title__area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.manu__wrapper .title__area span.manu__title {
   font-family: "Brandon Grotesque Black", sans-serif;
   font-size: 30px;
   font-weight: bold;
@@ -568,6 +591,8 @@
 }
 
 .manu__wrapper p.manu__context {
+  margin: 4px 12px;
+  font-family: BrandonGrotesque;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -1382,7 +1407,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .add__page__btn,
   .add__newsletter__section .add__newsletter__box .add__news__letter__main__box .add__newsletter-input-group .add__white__btn {
     display: block;
@@ -2041,10 +2066,6 @@ body {
   outline: none;
 }
 
-.mobile-search-box input:focus {
-  outline: none;
-}
-
 .mobile-search-box .mobile__search__drop__down__box {
   width: 100%;
   position: absolute;
@@ -2148,6 +2169,124 @@ body {
   margin-top: 20px;
 }
 
+.mobile__drop__down {
+  max-width: 100%;
+  margin: auto;
+  height: 566px;
+  background: #fff;
+  position: absolute;
+  left: 5%;
+  top: 55px;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #f3f3f4;
+  z-index: 999999;
+  padding: 15px 20px 20px;
+  display: none;
+}
+
+.mobile__drop__down .titles {
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #898394;
+}
+
+.mobile__drop__down .line {
+  height: 1px;
+  background: #e2e0e6;
+  margin: 8px 0 0;
+  width: 100%;
+}
+
+.mobile__drop__down .title__list__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mobile__drop__down .title__list__box h4 {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.mobile__drop__down .title__list__box div {
+  min-width: 141px;
+  height: 32px;
+  background: #ffe6e3;
+  display: inline-block;
+  padding: 4px 12px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f66757;
+  border-radius: 20px;
+}
+
+.mobile__drop__down .search__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  height: 49px;
+  margin-top: 25px;
+  margin-bottom: 32px;
+}
+
+.mobile__drop__down .search__item img {
+  width: 49px;
+  height: 68px;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.07) !important;
+}
+
+.mobile__drop__down .search__item div {
+  height: 100%;
+}
+
+.mobile__drop__down .search__item div h5 {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #141415;
+}
+
+.mobile__drop__down .search__item div p {
+  font-weight: 300;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #898394;
+  margin-top: -5px;
+}
+
+@media (min-width: 768px) {
+  .mobile__drop__down .search__item {
+    display: none;
+  }
+}
+
 .write__form__sidebar {
   min-width: 27%;
 }
@@ -2231,6 +2370,7 @@ body {
   display: flex;
   align-self: flex-end;
   justify-content: center;
+  cursor: pointer;
 }
 
 .write__form__content .right__main__content .right__main__content__btn p {
@@ -3292,7 +3432,7 @@ body {
 }
 
 .red__tag__box .tags {
-  min-width: 81px;
+  width: 81px;
   height: 32px;
   margin: 0 12px 0 0;
   border-radius: 20px;

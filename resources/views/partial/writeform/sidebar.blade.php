@@ -1,4 +1,24 @@
 <div class="nav nav-pills writers_side__menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a class="nav-link active" id="v-pills-1" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+        <p class="icon active">1</p>
+            <span class="list">Soumettre un manuscrit</span>
+    </a>
+    <a class="nav-link" id="v-pills-2" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+        <p class="icon active">2</p>
+        <span class="list">Conditions de présentation</span>
+    </a>
+    <a class="nav-link" id="v-pills-3" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+        <p class="icon active">3</p>
+        <span class="list">Lauteur du manuscrit</span>
+    </a>
+    <a class="nav-link " id="v-pills-4" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+         <p class="icon active">4</p>
+            <span class="list">Le manuscrit</span>
+    </a>
+  </div>
+
+
+  {{-- <div class="nav nav-pills writers_side__menu" id="v-pills-tab" role="tablist" aria-orientation="vertical">
     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
         <p class="icon active">1</p>
             <span class="list">Soumettre un manuscrit</span>
@@ -15,7 +35,7 @@
          <p class="icon active">4</p>
             <span class="list">Le manuscrit</span>
     </a>
-  </div>
+  </div> --}}
 
 
 {{-- <div class="write__form__sidebar">
