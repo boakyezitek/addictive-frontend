@@ -3,9 +3,14 @@
     padding:0;
     font-family: $font-stack-regular;
 }
+html{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 body{
-    overflow:hidden !important;
-    overflow-y:scroll !important;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
  // slider
@@ -428,7 +433,11 @@ body{
         display: flex;
         flex-wrap: wrap;
         gap: 0.8em;
-        margin-left: 8px;
+        margin-left: 5px;
+        @media(min-width:$breakpoint-small-mobile2){
+            gap: 0.4em;
+            margin-left: 2px;
+        }
         @media (min-width: $breakpoint-tablet) {
             gap: 2em;
             flex-wrap: wrap;

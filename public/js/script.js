@@ -5,6 +5,7 @@ $(".my-slider").slick({
   autoplay: true,
   autoplaySpeed: 2000,
   centerPadding: "40px",
+  mobileFirst:true,
   responsive: [
       // {
       //     breakpoint: 1920,
@@ -26,12 +27,12 @@ $(".my-slider").slick({
       //     }
       //   },
       {
-          breakpoint: 320,
+          breakpoint: 1920,
           settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: "180px",
-              slidesToShow: 1
+              slidesToShow: 3
           }
       }
   ]

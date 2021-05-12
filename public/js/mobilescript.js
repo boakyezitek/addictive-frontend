@@ -1,10 +1,8 @@
 $(".mobile_main_menu").on("click", function() {
-    $(".mobile-nav").css("background-color",background);
+    $(".mobile-nav").css("background-color");
     $('#toggle-menu').hide();
     $('#hide-menu').show();
-    $('.mobile_main_logo').hide();
-    $('.mobile_main_logo_toggle').show();
-
+$(".mobile__menu__box").toggle();
 
 });
 

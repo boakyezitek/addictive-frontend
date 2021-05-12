@@ -2,7 +2,7 @@
     <div class="menu-icons">
         <div>
             <img src="img/icons/ic-menu.svg" class="mobile_main_menu" id="toggle-menu" />
-            <img src="img/icons/ic-close.png" class="mobile_main_menu_1" id="hide-menu" style="display:none;" />
+            <img src="img/icons/ic-close.svg" class="menu__close" id="hide-menu" style="display:none;" />
         </div>
         <div>
             <img src="img/logo/logo.svg" class="mobile_main_logo" />

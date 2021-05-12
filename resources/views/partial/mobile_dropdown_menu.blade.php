@@ -1,4 +1,4 @@
-<div class="mobile__drop__down">
+{{-- <div class="mobile__drop__down">
     <h5 class="titles">Auteure</h5>
     <div class="line"></div>
     <div class="title__list__box">
@@ -39,7 +39,7 @@
             <p>Emma Green</p>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 

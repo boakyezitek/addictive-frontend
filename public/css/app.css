@@ -828,9 +828,14 @@
   font-family: "Brandon Grotesque Light", sans-serif;
 }
 
+html {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 body {
-  overflow: hidden !important;
-  overflow-y: scroll !important;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .my-slider {
@@ -1296,7 +1301,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8em;
-  margin-left: 8px;
+  margin-left: 5px;
+}
+
+@media (min-width: 375px) {
+  .add__content__section .add__content__box {
+    gap: 0.4em;
+    margin-left: 2px;
+  }
 }
 
 @media (min-width: 768px) {
